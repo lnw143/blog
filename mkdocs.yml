@@ -57,6 +57,7 @@ nav:
 
 # Plugins
 plugins:
+  - search
   - blog:
       post_url_format: "{categories}/{slug}"
       post_url_max_categories: 1
