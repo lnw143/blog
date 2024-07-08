@@ -11,7 +11,7 @@ pin: false
 
 # $\sin/\cos(\alpha+\beta)$ 的展开证明
 
-[图](https://www.desmos.com/calculator/mxat6bxhv0)
+[图](https://www.desmos.com/calculator/wd6yildrwt)
 
 ---
 
