@@ -1,0 +1,105 @@
+# Project information
+site_name: Liam's Blog
+site_author: lnw143
+site_url: https://lnw143.github.io
+
+# Repository
+repo_name: 'lnw143.github.io'
+repo_url: 'https://github.com/lnw143/lnw143.github.io'
+
+# Copyright
+copyright: 'Copyright &copy; 2024 Liam'
+
+# Theme Settings
+theme:
+  name: material
+  language: 'zh'
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: dark-blue
+      accent: white
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  icon:
+    logo: 'material/omega'
+  font:
+    text: 'Fira Sans'
+    code: 'Fira Mono'
+  features:
+    - navigation.tabs
+    - navigation.instant
+
+# Contents
+nav:
+  - 主页:
+    - blog/index.md
+  - Geometry:
+    - blog/posts/algo/geometry/index.md
+  - Poly:
+    - blog/posts/algo/poly/index.md
+  - Codeforces:
+    - blog/posts/tutorial/CF/index.md
+  # - AtCoder:
+  #   - blog/posts/AtCoder/index.md
+  # - Math:
+
+# Plugins
+plugins:
+  - blog:
+      post_url_format: "{categories}/{slug}"
+      post_url_max_categories: 1
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - def_list
+  - footnotes
+  - meta
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      # emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - toc:
+      permalink: ""
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.progressbar
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
