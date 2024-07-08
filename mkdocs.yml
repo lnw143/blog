@@ -8,7 +8,9 @@ repo_name: 'lnw143.github.io'
 repo_url: 'https://github.com/lnw143/lnw143.github.io'
 
 # Copyright
-copyright: 'Copyright &copy; 2024 Liam'
+copyright: 'Copyright &copy; 2024 Liam<br>&copy; 本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用'
+
+license: ''
 
 # Theme Settings
 theme:
