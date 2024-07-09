@@ -14,6 +14,7 @@ copyright: 'Copyright &copy; 2024 Liam<br>&copy; 本页面的全部内容在 <a 
 theme:
   name: material
   language: 'zh'
+  custom_dir: overrides
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -32,12 +33,16 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+  favicon: 'favicon.svg'
   icon:
     logo: 'material/omega'
   font:
     text: 'Fira Sans'
     code: 'Fira Mono'
   features:
+    - content.code.annotate
+    - content.code.select
+    - content.code.copy
     - navigation.tabs
     - navigation.instant
 
@@ -49,6 +54,8 @@ nav:
     - blog/posts/algo/geometry/index.md
   - Poly:
     - blog/posts/algo/poly/index.md
+  - Number Theory:
+    - blog/posts/algo/number-theory/index.md
   - Codeforces:
     - blog/posts/tutorial/CF/index.md
   # - AtCoder:
