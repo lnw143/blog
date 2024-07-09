@@ -3,7 +3,7 @@
 
 Copyright © 2024 lnw143(lnwbkb143@163.com)
 
-Project Url: project url list
+Project Url: https://github.com/lnw143/lnw143.github.io
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
