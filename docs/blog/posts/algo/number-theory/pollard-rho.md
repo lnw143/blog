@@ -23,7 +23,7 @@ pin: false
 
 设 $g_i = f_i \bmod m$，则 $g$ 中不同的数量的期望为 $O(\sqrt m)$。
 
-于是我们可以在期望 $O(\sqrt m) \le O(n ^ {\frac 1 4})$ 的时间内找到两个位置 $i,j$ 使得 $f_i \not = f_j \land g_i = g_j$，即 $n \nmid f_i - f_j \land m \mid f_i - f_j$，于是有 $1 \lt m \le \gcd(|f_i - f_j|, n) \lt n$
+于是我们可以在期望 $O(\sqrt m) \le O(n ^ {\frac 1 4})$ 的时间内找到两个位置 $i,j$ 使得 $f_i \not = f_j \land g_i = g_j$，即 $n \nmid (f_i - f_j) \land m \mid (f_i - f_j)$，于是有 $1 \lt m \le \gcd(|f_i - f_j|, n) \lt n$
 
 于是我们可以在期望 $O(n ^ {\frac 1 4})$ 的时间内找到 $k$ 满足 $1 \lt gcd(k,n) \lt n$，也就找到了一个 $n$ 的非平凡因子。
 
@@ -47,6 +47,7 @@ pin: false
 			};
 			ll s=f(0),t=f(f(0));
 			while(true) {
+				if(s==t) break;
 				ll d=gcd(abs(s-t),n);
 				if(d>1) return d;
 				s=f(s);

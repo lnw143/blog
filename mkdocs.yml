@@ -45,6 +45,7 @@ theme:
     - content.code.copy
     - navigation.tabs
     - navigation.instant
+    - navigation.indexes
 
 # Contents
 nav:
@@ -56,6 +57,8 @@ nav:
     - blog/posts/algo/poly/index.md
   - Number Theory:
     - blog/posts/algo/number-theory/index.md
+  - Math:
+    - blog/posts/algo/math/index.md
   - Codeforces:
     - blog/posts/tutorial/CF/index.md
   # - AtCoder:
@@ -68,6 +71,8 @@ plugins:
   - blog:
       post_url_format: "{categories}/{slug}"
       post_url_max_categories: 1
+      blog_toc: true
+      # post_dir: "{blog}/"
 
 # Extensions
 markdown_extensions:
