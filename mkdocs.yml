@@ -115,9 +115,10 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/katex.js
+  - javascripts/music.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-  - https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js
+  - https://unpkg.com/jquery@3.4.1/dist/jquery.js
   - https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js
   - https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
 
@@ -125,6 +126,3 @@ extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
   - stylesheets/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css
-
-hooks:
-  - hooks/music.py
