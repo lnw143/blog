@@ -3,7 +3,9 @@ window.onload = function() {
 		server="netease"
 		type="playlist"
 		id="12306622175"
-		style="position: fixed; bottom: 0px; right: 0px; width: 500px;"
+		fixed="true"
+		loop="all"
+		volume="0.3"
 	>
 	</meting-js>`)
 
