@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+	<!-- Add scripts that need to run before here -->
+	{{ super() }}
+	<!-- Add scripts that need to run afterwards here -->
+	<!-- music module -->
+	<meting-js
+		server="netease"
+		type="playlist"
+		id="12306622175"
+		fixed="true"
+		loop="all"
+		volume="0.3"
+	>
+	</meting-js>
+{% endblock %}

@@ -115,7 +115,6 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/katex.js
-  - javascripts/music.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
   - https://unpkg.com/jquery@3.4.1/dist/jquery.js
