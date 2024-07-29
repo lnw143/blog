@@ -2,8 +2,6 @@
 authors:
   - lnw143
 date: 2024-07-08
-draft: false
-pin: false
 ---
 
 # Welcome to Liam's Blog

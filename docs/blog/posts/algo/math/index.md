@@ -5,8 +5,6 @@ authors:
 categories:
   - Math
 date: 2024-07-10
-draft: false
-pin: false
 ---
 
 # 数学

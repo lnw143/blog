@@ -5,8 +5,6 @@ authors:
 categories:
   - Geometry
 date: 2024-07-08
-draft: false
-pin: false
 ---
 
 # 计算几何

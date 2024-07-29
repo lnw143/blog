@@ -6,7 +6,6 @@ categories:
   - Math
 date: 2024-07-10
 draft: true
-pin: false
 ---
 
 # Berlekamp-Massey 算法

@@ -5,8 +5,6 @@ authors:
 categories:
   - Geometry
 date: 2024-06-16
-draft: false
-pin: false
 ---
 
 # 平面直角坐标系的点绕原点旋转公式及证明

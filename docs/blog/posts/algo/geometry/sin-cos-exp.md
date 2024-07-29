@@ -5,8 +5,6 @@ authors:
 categories:
   - Geometry
 date: 2024-06-16
-draft: false
-pin: false
 ---
 
 # $\sin/\cos(\alpha+\beta)$ 的展开证明

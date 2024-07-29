@@ -5,8 +5,8 @@ authors:
 categories:
   - Codeforces
 date: 2024-07-08
-draft: false
-pin: false
+
+
 ---
 
 # Codeforces 解题笔记

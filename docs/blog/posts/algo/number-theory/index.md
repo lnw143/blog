@@ -5,8 +5,6 @@ authors:
 categories:
   - Number Theory
 date: 2024-07-09
-draft: false
-pin: false
 ---
 
 # 数论

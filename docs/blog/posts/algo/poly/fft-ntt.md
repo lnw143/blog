@@ -2,10 +2,8 @@
 authors:
   - lnw143
 categories:
-  - poly
+  - Poly
 date: 2024-06-22
-draft: false
-pin: false
 ---
 
 # FFT & NTT 复习笔记
