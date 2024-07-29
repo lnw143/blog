@@ -5,3 +5,7 @@
 .highlight {
 	font-size: 18px !important;
 }
+
+article {
+	width: 100%;
+}
