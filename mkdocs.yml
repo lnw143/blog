@@ -73,7 +73,8 @@ nav:
 plugins:
   - search
   - blog:
-      post_url_format: "{categories}/{slug}"
+      post_url_format: "{categories}/{file}"
+      post_date_format: medium
       post_url_max_categories: 1
       blog_toc: true
       # post_dir: "{blog}/"

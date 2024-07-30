@@ -1,5 +1,4 @@
 ---
-title: pollard-rho
 authors:
   - lnw143
 categories:

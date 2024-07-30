@@ -1,5 +1,4 @@
 ---
-title: berlekamp-massey
 authors:
   - lnw143
 categories:

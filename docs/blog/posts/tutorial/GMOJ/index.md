@@ -1,5 +1,4 @@
 ---
-title: index
 authors:
   - lnw143
 categories:

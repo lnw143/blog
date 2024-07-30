@@ -1,5 +1,4 @@
 ---
-title: miller-rabin
 authors:
   - lnw143
 categories:

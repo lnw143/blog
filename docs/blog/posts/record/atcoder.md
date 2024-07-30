@@ -1,5 +1,4 @@
 ---
-title: atcoder
 authors:
   - lnw143
 categories:

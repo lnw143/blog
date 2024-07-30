@@ -1,5 +1,4 @@
 ---
-title: sin-cos-exp
 authors:
   - lnw143
 categories:

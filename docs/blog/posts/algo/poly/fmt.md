@@ -1,5 +1,4 @@
 ---
-title: fmt
 authors:
   - lnw143
 categories:

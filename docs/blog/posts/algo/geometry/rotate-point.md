@@ -1,5 +1,4 @@
 ---
-title: rotate-point
 authors:
   - lnw143
 categories:
