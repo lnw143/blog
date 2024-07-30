@@ -61,6 +61,8 @@ nav:
     - blog/posts/algo/math/index.md
   - Codeforces:
     - blog/posts/tutorial/CF/index.md
+  - GMOJ:
+    - blog/posts/tutorial/GMOJ/index.md
   - Record:
     - blog/posts/record/index.md
   # - AtCoder:
