@@ -5,8 +5,6 @@ authors:
 categories:
   - Codeforces
 date: 2024-07-08
-
-
 ---
 
 # Codeforces 解题笔记
