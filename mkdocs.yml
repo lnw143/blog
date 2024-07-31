@@ -1,11 +1,11 @@
 # Project information
 site_name: Liam's Blog
 site_author: lnw143
-site_url: https://lnw143.github.io
+site_url: https://lnw143.github.io/blog/
 
 # Repository
-repo_name: 'lnw143.github.io'
-repo_url: 'https://github.com/lnw143/lnw143.github.io'
+repo_name: 'blog'
+repo_url: 'https://github.com/lnw143/blog'
 
 # Copyright
 copyright: 'Copyright &copy; 2024 Liam<br>&copy; 本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用'
