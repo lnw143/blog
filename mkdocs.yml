@@ -1,7 +1,7 @@
 # Project information
 site_name: Liam's Blog
 site_author: lnw143
-site_url: https://lnw143.github.io/
+site_url: https://lnw143.github.io/blog/
 
 # Repository
 repo_name: 'blog'
@@ -50,21 +50,21 @@ theme:
 # Contents
 nav:
   - 主页:
-    - blog/index.md
+    - index.md
   - Geometry:
-    - blog/posts/algo/geometry/index.md
+    - posts/algo/geometry/index.md
   - Poly:
-    - blog/posts/algo/poly/index.md
+    - posts/algo/poly/index.md
   - Number Theory:
-    - blog/posts/algo/number-theory/index.md
+    - posts/algo/number-theory/index.md
   - Math:
-    - blog/posts/algo/math/index.md
+    - posts/algo/math/index.md
   - Codeforces:
-    - blog/posts/tutorial/CF/index.md
+    - posts/tutorial/CF/index.md
   - GMOJ:
-    - blog/posts/tutorial/GMOJ/index.md
+    - posts/tutorial/GMOJ/index.md
   - Record:
-    - blog/posts/record/index.md
+    - posts/record/index.md
   # - AtCoder:
   #   - blog/posts/AtCoder/index.md
   # - Math:
@@ -73,6 +73,7 @@ nav:
 plugins:
   - search
   - blog:
+      blog_dir: "./"
       post_url_format: "{categories}/{file}"
       post_date_format: medium
       post_url_max_categories: 1
