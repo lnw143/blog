@@ -224,9 +224,9 @@ $$
 
 因此，我们考虑用辗转相除法。
 
-每次使得 $a_{j,i} \gets a_{j,i} \bmod a_{i,i}$，并交换第 $i$ 行与第 $j$ 行。
+每次使得 $a_{j,i} \gets a_{j,i} \bmod a_{i,i}$，并交换第 $i$ 行与第 $j$ 行，直到 $a_{i,i}$ 为 $0$。
 
-即让第 $j$ 行加上第 $i$ 行乘 $- \lfloor \frac{a_{i,j}}{a_{i,i}} \rfloor$，并交换第 $i$ 行与第 $j$ 行。
+即让第 $j$ 行加上第 $i$ 行乘 $- \lfloor \frac{a_{i,j}}{a_{i,i}} \rfloor$。
 
 时间复杂度看似是 $\mathrm O(n^3 \log P)$，但可以证明是 $\mathrm O(n^3)$，其中 $P$ 是模数。
 
