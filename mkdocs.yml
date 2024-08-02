@@ -22,16 +22,16 @@ theme:
       primary: white
       accent: red
       toggle:
-        icon: material/weather-sunny
+        icon: material/toggle-switch
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: dark-blue
+      primary: custom
       accent: white
       toggle:
-        icon: material/weather-night
+        icon: material/toggle-switch-off-outline
         name: Switch to light mode
   favicon: 'favicon.svg'
   icon:
