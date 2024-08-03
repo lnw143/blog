@@ -6,7 +6,7 @@ site_url: https://lnw143.github.io/blog/
 # Repository
 repo_name: 'blog'
 repo_url: 'https://github.com/lnw143/blog'
-edit_url: 'edit/master/docs/'
+edit_uri: 'edit/main/docs/'
 
 # Theme Settings
 theme:
@@ -40,6 +40,7 @@ theme:
   features:
     - content.code.annotate
     - content.code.select
+    - content.action.view
     - content.code.copy
     - navigation.tabs
     - navigation.instant
