@@ -18,14 +18,8 @@ date: 2024-07-08
 
 Nothing.
 
-## Link
+## Links
 
-- [Github](https://github.com/lnw143)
+- [Tangninghaha](https://tangninghaha.netlify.app/)
 
-- [Luogu](https://www.luogu.com.cn/user/767819)
-
-- [Codeforces](https://codeforces.com/profile/lnw143)
-
-- [AtCoder](https://atcoder.jp/users/lnw143)
-
-- [TopCoder](https://www.topcoder.com/members/lnw143/)
+- [ZnPdCo](https://znpdco.github.io/blog/)
