@@ -6,8 +6,6 @@ categories:
 date: 
   created: 2024-07-10
   updated: 2024-08-02
-links:
-  - Material documentation: https://squidfunk.github.io/mkdocs-material
 ---
 
 # 数学
