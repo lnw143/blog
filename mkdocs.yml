@@ -64,9 +64,10 @@ nav:
     - posts/tutorial/GMOJ/index.md
   - Record:
     - posts/record/index.md
+  - Misc:
+    - posts/misc/index.md
   # - AtCoder:
   #   - blog/posts/AtCoder/index.md
-  # - Math:
 
 # Plugins
 plugins:
