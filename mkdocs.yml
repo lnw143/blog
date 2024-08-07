@@ -58,6 +58,8 @@ nav:
     - posts/algo/number-theory/index.md
   - Math:
     - posts/algo/math/index.md
+  - String:
+    - posts/algo/string/index.md
   - Codeforces:
     - posts/tutorial/CF/index.md
   - GMOJ:
