@@ -75,12 +75,14 @@ nav:
 plugins:
   - search
   - blog:
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
       blog_dir: "./"
       post_url_format: "{categories}/{file}"
       post_date_format: medium
       post_url_max_categories: 1
       blog_toc: true
-      # post_dir: "{blog}/"
 
 # Extensions
 markdown_extensions:
@@ -90,6 +92,10 @@ markdown_extensions:
   - meta
   - attr_list
   - md_in_html
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
