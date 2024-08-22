@@ -3,10 +3,12 @@ authors:
   - lnw143
 categories:
   - Poly
-date: 2024-04-30
+date:
+  created: 2024-04-30
+  updated: 2024-08-22
 ---
 
-# FWT(Fast Walsh Transform) 学习笔记
+# $\rm FWT$ (Fast Walsh Transform) 学习笔记
 
 > 本文中使用 $\cap$ 表示按位与，用 $\cup$ 表示按位或
 
@@ -117,7 +119,7 @@ $$
 
 有点抽象，画个 $n=3$ 的图来模拟一下
 
-![快速变换图解](https://images.cnblogs.com/cnblogs_com/blogs/798566/galleries/2328994/o_240428080011_fwt_xor.svg)
+![快速变换图解](fwt-1.svg)
 
 假设现在我们要考虑从 $n=2$ 到 $n=3$ 的变换，我们发现左边是 `0??`，右边是 `1??`，分别多出一个最高位
 
@@ -180,3 +182,56 @@ void fwtXor(ll *a,int n,int type) {
 			}
 }
 ```
+
+## 进阶理解
+
+$\rm FWT$ 的变换本质实际上是构造 $g$ 的过程。
+
+设 $\hat A_i = \sum_j g(i,j) A_j$，那么这个 $n \times n$ 的 $\lceil$转移矩阵$\rfloor$ 被称为位矩阵。
+
+对于不同的卷积形式，我们需要构造不同的位矩阵。
+
+特别注意由于我们需要逆变换，因此矩阵必须有逆。
+
+形式化地，对于 $\odot$ 卷积，即 $C_i = \sum_{j \odot k = i} A_j B_k$，我们需要构造如下位矩阵：
+
+$$
+\begin{aligned}
+& \hat C_i = \hat A_i \hat B_i \\
+\iff & \sum_j g(i,j) C_j = \sum_j g(i,j) A_j \sum_k g(i,k) B_k \\
+\iff & \sum_j g(i,j) C_j = \sum_j \sum_k g(i,j) g(i,k) A_j B_k \\
+\iff & g(i,j \odot k) = g(i,j) g(i,k)
+\end{aligned}
+$$
+
+写的不是很严谨，请读者自己手推一下。
+
+对于上文的三类卷积，其位矩阵的构造显然为
+
+$$
+g_{\cup}(i,j) = [i \cup j = i] \\
+g_{\cap}(i,j) = [i \cap j = i] \\
+g_{\oplus}(i,j) = (-1)^{\mathrm{popcnt} (i \cap j)}
+$$
+
+## $\rm FWT$ 的线性性
+
+设 $\mathrm{FWT}(A)_i = \hat A_i = \sum_j g(i,j) A_j$，则有如下引理。
+
+??? note "$\mathrm{FWT}(A+B) = \mathrm{FWT}(A) + \mathrm{FWT}(B)$"
+	根据公式显然。
+
+??? note "$\mathrm{FWT}(cA) = c\mathrm{FWT}(A)$"
+	这个也是显然（
+
+??? note "$\mathrm{FWT}(A^{-1})_i = g(i,0) \mathrm{FWT}(A)_i^{-1}$"
+	$$
+	\begin{aligned}
+	& \mathrm{FWT}(A^{-1})_i \mathrm{FWT}(A)_i \\
+	& = \sum_j g(i,j) A^{-1}_j \sum_k g(i,k) A_k \\
+	& = \sum_j \sum_k g(i,j \odot k) A^{-1}_j A_k \\
+	& = \sum_{p} g(i,p) \sum_{j \odot k = p} A^{-1}_j A_k \\
+	& = \sum_{p} g(i,p) [p=0] \\
+	& = g(i,0) \\
+	\end{aligned}
+	$$
