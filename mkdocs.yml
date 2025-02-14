@@ -60,6 +60,8 @@ nav:
     - posts/algo/math/index.md
   - String:
     - posts/algo/string/index.md
+  - Theory:
+    - posts/algo/theory/index.md
   - Codeforces:
     - posts/tutorial/CF/index.md
   - GMOJ:
