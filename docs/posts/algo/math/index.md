@@ -5,7 +5,7 @@ categories:
   - Math
 date: 
   created: 2024-07-10
-  updated: 2024-08-02
+  updated: 2025-02-22
 ---
 
 # 数学
@@ -17,3 +17,5 @@ date:
 - 线性代数
 
 	- [行列式](det.md)
+  
+- [单位根相关](unit-root.md)
