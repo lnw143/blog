@@ -12,3 +12,6 @@ date: 2024-07-29
 
 - [AtCoder](atcoder.md)
 
+## 技巧总结
+
+- [计数类 DP 技巧汇总](trick/count-dp.md)
