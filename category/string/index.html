@@ -1,0 +1,2064 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="lnw143">
+      
+      
+        <link rel="canonical" href="https://lnw143.github.io/blog/category/string/">
+      
+      
+        <link rel="prev" href="../record/">
+      
+      
+        <link rel="next" href="../theory/">
+      
+      
+      <link rel="icon" href="../../favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>String - Liam's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <script src="../../assets/javascripts/toggle-sidebar.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#string" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Liam&#39;s Blog" class="md-header__button md-logo" aria-label="Liam's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.15 19h-5.76v-2.13c2.11-1.62 3.2-3.63 3.2-6.03 0-1.5-.43-2.68-1.27-3.55C14.47 6.42 13.37 6 12.03 6c-1.35 0-2.46.42-3.32 1.3-.87.87-1.3 2.07-1.3 3.58 0 2.38 1.09 4.38 3.2 5.99V19H4.85v-2.13h3.56c-2.37-1.55-3.56-3.64-3.56-6.27 0-2.1.65-3.74 1.96-4.94 1.31-1.21 3.03-1.81 5.16-1.81 2.18 0 3.92.6 5.22 1.79 1.31 1.19 1.96 2.86 1.96 4.94 0 2.63-1.2 4.73-3.6 6.29h3.6z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liam's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              String
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lnw143/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  主页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../geometry/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Geometry
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../poly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Poly
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Number Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../string/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  String
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../codeforces/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gmoj/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  GMOJ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../record/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Record
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liam&#39;s Blog" class="md-nav__button md-logo" aria-label="Liam's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.15 19h-5.76v-2.13c2.11-1.62 3.2-3.63 3.2-6.03 0-1.5-.43-2.68-1.27-3.55C14.47 6.42 13.37 6 12.03 6c-1.35 0-2.46.42-3.32 1.3-.87.87-1.3 2.07-1.3 3.58 0 2.38 1.09 4.38 3.2 5.99V19H4.85v-2.13h3.56c-2.37-1.55-3.56-3.64-3.56-6.27 0-2.1.65-3.74 1.96-4.94 1.31-1.21 3.03-1.81 5.16-1.81 2.18 0 3.92.6 5.22 1.79 1.31 1.19 1.96 2.86 1.96 4.94 0 2.63-1.2 4.73-3.6 6.29h3.6z"/></svg>
+
+    </a>
+    Liam's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lnw143/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            主页
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            归档
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    分类
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            分类
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../codeforces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Codeforces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../gmoj/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GMOJ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Geometry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Misc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Number Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../poly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Poly
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Record
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    String
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    String
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#字符串" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#后缀数组" class="md-nav__link">
+    <span class="md-ellipsis">
+      后缀数组
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../geometry/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Geometry
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../poly/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Poly
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Poly
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../number-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Number Theory
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Number Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../string/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    String
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            String
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Theory
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../codeforces/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Codeforces
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Codeforces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../gmoj/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    GMOJ
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            GMOJ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../record/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Record
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Record
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../misc/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Misc
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#字符串" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#后缀数组" class="md-nav__link">
+    <span class="md-ellipsis">
+      后缀数组
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="string">String</h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/lnw143.png" alt="Liam">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-08-07 00:00:00+00:00">2024年8月7日</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="./" class="md-meta__link">String</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="字符串"><a class="toclink" href="../../string/">字符串</a></h2>
+<p>这里是一些字符串相关的算法。</p>
+<ul>
+<li><a href="../../string/suffix-array/">后缀数组</a></li>
+</ul>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/lnw143.png" alt="Liam">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-08-07 00:00:00+00:00">2024年8月7日</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="./" class="md-meta__link">String</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 4 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="后缀数组"><a class="toclink" href="../../string/suffix-array/">后缀数组</a></h2>
+<p>后缀数组是处理字符串的利器。</p>
+<h3 id="定义"><a class="toclink" href="../../string/suffix-array/#定义">定义</a></h3>
+<p>对于长度为 <span class="arithmatex">\(n\)</span> 的字符串 <span class="arithmatex">\(s = s_1 s_2 \cdots s_n\)</span>，定义 <span class="arithmatex">\(s[i,j] = s_i s_{i+1} \cdots s_j\)</span>，即 <span class="arithmatex">\(s\)</span> 的第 <span class="arithmatex">\(i\)</span> 个到第 <span class="arithmatex">\(j\)</span> 个字符形成的子串。</p>
+<p>定义 <code>sa</code> 为 <span class="arithmatex">\(s\)</span> 的后缀数组，<code>sa[i]</code> 表示第 <span class="arithmatex">\(i\)</span> 小的后缀的编号。</p>
+<p>定义 <code>rk[sa[i]]=i</code>，即 <code>rk[i]</code> 表示后缀 <span class="arithmatex">\(i\)</span> 的 rank。</p>
+<h3 id="求解"><a class="toclink" href="../../string/suffix-array/#求解">求解</a></h3>
+<p>考虑最暴力的做法，取出所有后缀并排序，空间复杂度 <span class="arithmatex">\(O(n ^ 2)\)</span>，时间复杂度 <span class="arithmatex">\(O(n^2 \log n)\)</span>。</p>
+<p>考虑倍增，设 <code>rk[j][i]</code> 表示在所有长度为 <span class="arithmatex">\(2^j\)</span> 的后缀中，后缀 <span class="arithmatex">\(s[i,i+2^j-1]\)</span> 的 rank（超出 <span class="arithmatex">\(n\)</span> 的部分记为空字符，小于任何非空字符）。</p>
+<p>显然我们可以 naively 得到 <code>rk[0][i]</code>，考虑如何由 <code>rk[j-1]</code> 得到 <code>rk[j]</code>。</p>
+<p>发现可以将所有二元组 <code>(rk[j-1][i],rk[j-1][i+(1&lt;&lt;(j-1))]</code> 排序，即把每段后缀分为前后两段，并以前一半的 rank 作为第一关键字，后一半的 rank 作为第二关键字，超出 <span class="arithmatex">\(n\)</span> 的部分记为 <code>0</code>，排序后得到 <code>rk[j]</code>。</p>
+<p>总共倍增 <span class="arithmatex">\(\mathrm O(\log n)\)</span> 次，每次排序 <span class="arithmatex">\(\mathrm O(n \log n)\)</span>，总时间复杂度 <span class="arithmatex">\(\mathrm O(n \log^2 n)\)</span>。</p>
+<p>发现 <code>rk</code> 的值域是 <span class="arithmatex">\(\mathrm O(n)\)</span> 的，因此可以用桶排做到 <span class="arithmatex">\(O(n \log n)\)</span>。</p>
+<p>在算法竞赛中这已经足够了，如果追求更优的时间复杂度，可以考虑 SA-IS / DC3 算法，线性时间复杂度，但实现十分复杂，在竞赛中不常用，因此不再赘述。</p>
+<p>显然通过 <code>rk</code> 可以 <span class="arithmatex">\(\mathrm O(n)\)</span> 得到 <code>sa</code>。</p>
+<h3 id="height-数组"><a class="toclink" href="../../string/suffix-array/#height-数组">height 数组</a></h3>
+<p>定义 <code>ht[i]</code> 为后缀 <code>sa[i]</code> 与 <code>sa[i-1]</code> 的最长公共前缀的长度，并设 <code>ht[1]=0</code>。</p>
+<p>一眼看来似乎没有线性做法，但是我们将尝试证明以下引理：</p>
+<p><em>Lemma:</em> <code>ht[rk[i]]</code> <span class="arithmatex">\(\ge\)</span> <code>ht[rk[i-1]]-1</code>。</p>
+<hr />
+<p><em>Proof:</em></p>
+<p><code>ht[rk[i-1]]</code> <span class="arithmatex">\(\le 1\)</span> 的情况是 naive 的。</p>
+<p>若 <code>ht[rk[i-1]]</code> <span class="arithmatex">\(\ge 2\)</span>，即 <code>sa[rk[i-1]-1]</code> 与 <code>i-1</code> 的最长公共前缀长度 <span class="arithmatex">\(\ge 2\)</span>，设这个最长公共前缀为 <span class="arithmatex">\(aA\)</span>，其中 <span class="arithmatex">\(a\)</span> 是单个字符，<span class="arithmatex">\(A\)</span> 是一个非空字符串。</p>
+<p>那么设后缀 <code>sa[rk[i-1]-1]</code> 为 <span class="arithmatex">\(aAB\)</span>，<code>i-1</code> 为 <span class="arithmatex">\(aAC\)</span>，则 <span class="arithmatex">\(B \lt C\)</span>，且后缀 <code>sa[rk[i-1]-1]+1</code> 为 <span class="arithmatex">\(AB\)</span>，<code>i</code> 为 <span class="arithmatex">\(AC\)</span>。</p>
+<p>后缀 <code>sa[rk[i]-1]</code> 因为只比 <code>i</code> 前一名，所以是小于 <code>i</code> 中最大的，又因为 <span class="arithmatex">\(AB \lt AC\)</span>，所以 <span class="arithmatex">\(AB \le\)</span> 后缀 <code>sa[rk[i]-1]</code> <span class="arithmatex">\(\lt AC\)</span>，容易看出后缀 <code>i</code> 和后缀 <code>sa[rk[i]-1]</code> 有公共前缀 <span class="arithmatex">\(A\)</span>。</p>
+<p>于是 <code>ht[rk[i]]</code> $\ge |A| = $ <code>ht[rk[i-1]]-1</code>。</p>
+<p><span class="arithmatex">\(\square\)</span></p>
+<hr />
+<p>由此，我们从 <code>ht[rk[i-1]]-1</code> 开始暴力拓展 <code>ht[rk[i]]</code>，在 <span class="arithmatex">\(\mathrm O(n)\)</span> 的时间复杂度内得到 <code>ht</code>。</p>
+<p><code>ht</code> 数组有这样一个性质：后缀 <code>i,j</code> 的最长公共前缀长度等于 <code>ht[rk[i],rk[j])</code> 中的最小值。（钦定 <code>rk[i]</code> <span class="arithmatex">\(\lt\)</span> <code>rk[j]</code>）</p>
+<p>因此我们可以用 ST 表 <span class="arithmatex">\(\mathrm O(n \log n)\)</span> 预处理后 <span class="arithmatex">\(\mathrm O(1)\)</span> 询问任意后缀的最长公共前缀长度。</p>
+<h3 id="例题"><a class="toclink" href="../../string/suffix-array/#例题">例题</a></h3>
+<details class="note">
+<summary><a href="https://uoj.ac/problem/35">UOJ 35.后缀排序</a></summary>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+</span><span id="__span-2-2"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+</span><span id="__span-2-3"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+</span><span id="__span-2-4"><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+</span><span id="__span-2-5"><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e5</span><span class="p">;</span>
+</span><span id="__span-2-6"><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="n">sa</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="n">cnt</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="n">rk</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="n">ht</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+</span><span id="__span-2-7"><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+</span><span id="__span-2-8"><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-9"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-2-10"><span class="p">}</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+</span><span id="__span-2-11"><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-12"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">x</span><span class="o">!=</span><span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="o">?</span><span class="n">a</span><span class="p">.</span><span class="n">x</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="o">:</span><span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+</span><span id="__span-2-13"><span class="p">}</span>
+</span><span id="__span-2-14"><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-15"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">x</span><span class="o">==</span><span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="o">&amp;&amp;</span><span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="o">==</span><span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+</span><span id="__span-2-16"><span class="p">}</span>
+</span><span id="__span-2-17"><span class="kt">void</span><span class="w"> </span><span class="n">Sort</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-18"><span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">cnt</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">cnt</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-2-19"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">++</span><span class="n">cnt</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">];</span>
+</span><span id="__span-2-20"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">];</span>
+</span><span id="__span-2-21"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="n">cnt</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">]</span><span class="o">--</span><span class="p">]</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-2-22"><span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">cnt</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">cnt</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-2-23"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">++</span><span class="n">cnt</span><span class="p">[</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">];</span>
+</span><span id="__span-2-24"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">];</span>
+</span><span id="__span-2-25"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="o">--</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">cnt</span><span class="p">[</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">]</span><span class="o">--</span><span class="p">]</span><span class="o">=</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-2-26"><span class="p">}</span>
+</span><span id="__span-2-27"><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-28"><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-2-29"><span class="w">    </span><span class="n">n</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-2-30"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-2-31"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">128</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">];</span>
+</span><span id="__span-2-32"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">cnt</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+</span><span id="__span-2-33"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;&lt;=</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">^=</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-34"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="n">rk</span><span class="p">[</span><span class="n">k</span><span class="o">^</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">],</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">?</span><span class="n">rk</span><span class="p">[</span><span class="n">k</span><span class="o">^</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">};</span>
+</span><span id="__span-2-35"><span class="w">        </span><span class="n">Sort</span><span class="p">();</span>
+</span><span id="__span-2-36"><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-2-37"><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&amp;&amp;</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">])</span>
+</span><span id="__span-2-38"><span class="w">                </span><span class="n">rk</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+</span><span id="__span-2-39"><span class="w">            </span><span class="k">else</span>
+</span><span id="__span-2-40"><span class="w">                </span><span class="n">rk</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">id</span><span class="p">]</span><span class="o">=++</span><span class="n">t</span><span class="p">;</span>
+</span><span id="__span-2-41"><span class="w">        </span><span class="k">if</span><span class="p">((</span><span class="n">j</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">swap</span><span class="p">(</span><span class="n">rk</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span><span id="__span-2-42"><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-43"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">sa</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span><span id="__span-2-44"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-2-45"><span class="w">    </span><span class="n">putchar</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+</span><span id="__span-2-46"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-47"><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-2-48"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">?</span><span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">ht</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="mi">-1</span><span class="p">]]</span><span class="mi">-1</span><span class="p">)</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-49"><span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">&amp;&amp;</span><span class="n">sa</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="mi">-1</span><span class="p">]</span><span class="o">+</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">&amp;&amp;</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]</span><span class="o">==</span><span class="n">s</span><span class="p">[</span><span class="n">sa</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="mi">-1</span><span class="p">]</span><span class="o">+</span><span class="n">k</span><span class="p">])</span><span class="w"> </span><span class="o">++</span><span class="n">k</span><span class="p">;</span>
+</span><span id="__span-2-50"><span class="w">        </span><span class="n">ht</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+</span><span id="__span-2-51"><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-52"><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="n">ht</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-2-53"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-54"><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+          <div class="md-copyright__highlight">
+            Copyright © 2024 Liam<br>© 本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用
+          </div>
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        & 
+        <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+          GitHub Actions
+        </a>
+      </div>
+      <div class="md-social">
+        <a href="https://github.com/lnw143" target="_blank" rel="noopener" title="github" class="md-social__link">
+          <img src="https://github.com/fluidicon.png" alt="github">
+        </a>
+        <a href="https://www.luogu.com.cn/user/767819" target="_blank" rel="noopener" title="luogu" class="md-social__link">
+          <img src="https://www.luogu.com.cn/favicon.ico" alt="luogu">
+        </a>
+        <a href="https://codeforces.com/profile/lnw143" target="_blank" rel="noopener" title="codeforces" class="md-social__link">
+          <img src="https://codeforces.org/s/96336/favicon-32x32.png" alt="codeforces">
+        </a>
+        <a href="https://atcoder.jp/users/lnw143" target="_blank" rel="noopener" title="atcoder" class="md-social__link">
+          <img src="https://img.atcoder.jp/assets/logo.png" alt="atcoder">
+        </a>
+        <a href="https://www.topcoder.com/members/lnw143/" target="_blank" rel="noopener" title="topcoder" class="md-social__link">
+          <img src="https://www.topcoder.com/favicon.ico" alt="topcoder">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.select", "content.action.view", "content.code.copy", "navigation.tabs", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+	<!-- Add scripts that need to run before here -->
+	
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+      
+    
+	<!-- Add scripts that need to run afterwards here -->
+	<!-- music module -->
+	<meting-js
+		server="netease"
+		type="playlist"
+		id="12370214543"
+		fixed="true"
+		loop="all"
+		volume="0.3"
+	>
+	</meting-js>
+
+  </body>
+</html>
