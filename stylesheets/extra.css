@@ -1,0 +1,30 @@
+details .tabbed-set {
+	margin: 0 -12px !important;
+}
+
+details > div {
+	margin: -18px -12px !important;
+}
+
+.highlight {
+	font-size: 18px !important;
+}
+
+article {
+	width: 100%;
+}
+
+[data-md-color-scheme="slate"] img {
+	opacity: 0.9;
+	transition: all 0.3s;
+}
+
+img:hover {
+	opacity: 1;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2e303e;
+  --md-accent-fg-color: #00bda4;
+  --md-typeset-a-color: #526cfe;
+}
