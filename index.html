@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -1667,6 +1667,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2025-年-11-月做题记录" class="md-nav__link">
+    <span class="md-ellipsis">
+      2025 年 11 月做题记录
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#DP-相关-trick" class="md-nav__link">
     <span class="md-ellipsis">
       DP 相关 trick
@@ -1747,15 +1756,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#计数-DP-技巧" class="md-nav__link">
-    <span class="md-ellipsis">
-      计数 DP 技巧
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1793,6 +1793,52 @@
 </li>
 </ul>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/lnw143.png" alt="Liam">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-02 00:00:00+00:00">2025年11月2日</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="category/record/" class="md-meta__link">Record</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="2025-年-11-月做题记录"><a class="toclink" href="record/2025-11/">2025 年 11 月做题记录</a></h2>
+
+    
+      <nav class="md-post__action">
+        <a href="record/2025-11/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -2215,52 +2261,6 @@
           继续阅读
         </a>
       </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/lnw143.png" alt="Liam">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-07-11 00:00:00+00:00">2025年7月11日</time></li>
-        
-          <li class="md-meta__item">
-            分类于
-            
-              <a href="category/record/" class="md-meta__link">Record</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              需要 1 分钟阅读时间
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="计数-DP-技巧"><a class="toclink" href="record/count-dp/">计数 DP 技巧</a></h2>
-<h3 id="Cat-Jumps"><a class="toclink" href="record/count-dp/#Cat-Jumps"><a href="https://atcoder.jp/contests/wtf22-day2-open/tasks/wtf22_day2_d">Cat Jumps</a></a></h3>
-<blockquote>
-<p>sort: 组合意义</p>
-</blockquote>
-<p>将形如 <span class="arithmatex">\(\prod _{i=1} ^{n} (x+i)\)</span>，其中 <span class="arithmatex">\(x = \sum_i^n a_i\)</span> 的式子转化为对每个点连一条出边 <span class="arithmatex">\(j\)</span>，权值为 <span class="arithmatex">\(c_i = a_j + [j \le i]\)</span>，所有方案中边权乘积之和。这是因为 <span class="arithmatex">\(\sum \prod_i^n c_i = \prod_i^n \sum c_i\)</span>，而一个 <span class="arithmatex">\(i\)</span> 的所有方案中边权和恰为 <span class="arithmatex">\(i+\sum a\)</span>，故相等。</p>
-<p>之后用各类容斥技巧，以及第一、二类斯特林数进行计数。</p>
-
     
   </div>
 </article>
