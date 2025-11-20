@@ -1,0 +1,2854 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="lnw143">
+      
+      
+        <link rel="canonical" href="https://lnw143.github.io/blog/record/train/">
+      
+      
+        <link rel="prev" href="../../gmoj/p8829/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>模拟赛总结 - Liam's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <script src="../../assets/javascripts/toggle-sidebar.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#模拟赛总结" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Liam&#39;s Blog" class="md-header__button md-logo" aria-label="Liam's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.15 19h-5.76v-2.13c2.11-1.62 3.2-3.63 3.2-6.03 0-1.5-.43-2.68-1.27-3.55C14.47 6.42 13.37 6 12.03 6c-1.35 0-2.46.42-3.32 1.3-.87.87-1.3 2.07-1.3 3.58 0 2.38 1.09 4.38 3.2 5.99V19H4.85v-2.13h3.56c-2.37-1.55-3.56-3.64-3.56-6.27 0-2.1.65-3.74 1.96-4.94 1.31-1.21 3.03-1.81 5.16-1.81 2.18 0 3.92.6 5.22 1.79 1.31 1.19 1.96 2.86 1.96 4.94 0 2.63-1.2 4.73-3.6 6.29h3.6z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Liam's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              模拟赛总结
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lnw143/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  主页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../geometry/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Geometry
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../poly/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Poly
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Number Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../string/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  String
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Theory
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../codeforces/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Codeforces
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gmoj/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  GMOJ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Record
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Liam&#39;s Blog" class="md-nav__button md-logo" aria-label="Liam's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.15 19h-5.76v-2.13c2.11-1.62 3.2-3.63 3.2-6.03 0-1.5-.43-2.68-1.27-3.55C14.47 6.42 13.37 6 12.03 6c-1.35 0-2.46.42-3.32 1.3-.87.87-1.3 2.07-1.3 3.58 0 2.38 1.09 4.38 3.2 5.99V19H4.85v-2.13h3.56c-2.37-1.55-3.56-3.64-3.56-6.27 0-2.1.65-3.74 1.96-4.94 1.31-1.21 3.03-1.81 5.16-1.81 2.18 0 3.92.6 5.22 1.79 1.31 1.19 1.96 2.86 1.96 4.94 0 2.63-1.2 4.73-3.6 6.29h3.6z"/></svg>
+
+    </a>
+    Liam's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lnw143/blog" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    blog
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    主页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    归档
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    归档
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分类
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分类
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/codeforces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codeforces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/gmoj/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GMOJ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/misc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/number-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Number Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/poly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Poly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    String
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../geometry/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../poly/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Poly
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Poly
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../number-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Number Theory
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Number Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../math/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Math
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../string/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    String
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    String
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Theory
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../codeforces/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codeforces
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Codeforces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../gmoj/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GMOJ
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GMOJ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Record
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Record
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../misc/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Misc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#20251120-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251120 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251118-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251118 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251114-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251114 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251107-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251107 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251031-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251031 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251028-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251028 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251027-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251027 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-20251025-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [*] 20251025 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251022-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251022 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251018-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251018 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251017-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251017 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251007-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251007 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251012-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251012 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251008-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251008 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251007-赛后总结_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251007 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251005-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251005 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20251004-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251004 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250927-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250927 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250817-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250817 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250815-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250815 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250813-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250813 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2025812-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025.8.12 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250226-联考省选模拟赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025.02.26 联考省选模拟赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250221-联考省选模拟总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025.02.21 联考省选模拟总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250220-联考省选模拟总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2025.02.20 联考省选模拟总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250218-联考省选模拟总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250218 联考省选模拟总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250217-联考省选模拟总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250217 联考省选模拟总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20250211-联考省选模拟总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20250211 联考省选模拟总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20240205-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20240205 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20241217省选组模拟-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2024.12.17【省选组】模拟 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20241128noip2024终极模拟-赛后反思" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2024.11.28【NOIP2024】终极模拟 赛后反思
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1127noip模拟十六-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.27noip模拟十六 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1125noip模拟十五-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.25noip模拟十五 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20241120-模拟赛总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2024.11.20 模拟赛总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20241118提高组模拟-反思" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2024.11.18【提高组】模拟 反思
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20241123-训练总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20241123 训练总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/lnw143.png" alt="Liam">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/lnw143">Liam</a>
+                        
+                      </strong>
+                      <br>
+                      An OIer who believes in randomness.
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-11-20 00:00:00+00:00" class="md-ellipsis">2025年11月20日</time>
+                      </div>
+                    </li>
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
+                          <time datetime="2025-11-20 00:00:00+00:00" class="md-ellipsis">2025年11月20日</time>
+                        </div>
+                      </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            分类于
+                            
+                              <a href="../../category/record/">Record</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              需要 11 分钟阅读时间
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+  
+  
+
+
+<h1 id="模拟赛总结">模拟赛总结</h1>
+<!-- excerpt -->
+
+<details class="note">
+<summary>思路选项</summary>
+<p>常用：<mark>分治</mark></p>
+<p>树：树剖，启发式合并，点分治，虚树，<mark>点分树</mark></p>
+<p>DAG：bitset</p>
+<p>数据结构：</p>
+<ul>
+<li>线段树（李超线段树，猫树），树状数组</li>
+<li>平衡树（Treap，WBLT，Splay）</li>
+<li>ST 表</li>
+<li>单调队列，单调栈，双指针</li>
+<li>分块</li>
+<li>并查集/Kruskal重构树</li>
+<li>ODT/颜色段均摊</li>
+<li>可持久化</li>
+<li>线段树分治</li>
+<li>繁转简（离线：整体二分，CDQ，莫队）</li>
+</ul>
+<p>网络流：拆点，建模</p>
+<p>图上问题：圆方树</p>
+<p>构造：欧拉回路</p>
+<p>平面图计数：<span class="arithmatex">\(V-E+F=C+1\)</span></p>
+<p>图匹配：匈牙利，KM，带花树</p>
+<p>生成树计数：矩阵树定理</p>
+<p>Basic：二分，Meet in the Middle,DP（？），二进制分组</p>
+<p>思路：切比雪夫转曼哈顿，二分/分数规划</p>
+</details>
+<h2 id="20251120-赛后总结">20251120 赛后总结</h2>
+<p>今天把总结都搬过来了，可能有些咕咕没有解决。</p>
+<p>开场先看题，发现 T1 好像没啥 polylog 的可行性，T2 好像可以树剖做到 2log，不会什么优化。T3 不怎么有想法，看到 T4，想了比较久发现是二维偏序 DP，cdq 做到 2log。</p>
+<p>这时去打 T2，写完测大样例发现还行，于是去想 T1，发现可以去掉 log 变成 <span class="arithmatex">\(O(n \sqrt n)\)</span>，感觉挺对，于是开写，调了一会过了大样例，于是丢下去写 T3。</p>
+<p>T3 压根没想到啥性质，写了 10 分暴力走人了。</p>
+<p>赛后发现 T1 挂分了，原因是数组越界与输入忘记排序，大样例没测出来。</p>
+<p>这是严重的失分，CSP T3 已经犯了一次没开大数组的错误了，下次一定记得静下心来检查是否有越界可能，细节决定成败。</p>
+<p>以及仔细阅读题面要求，不要理所当然认为输入有约定。</p>
+<p>T2 写了 2log 有点卡，差了 0.3s 到时限，赛后发现有点分树 1log 简单做法，还是没有做思路联想，下次要记住这次的教训。</p>
+<p>T3 发现是类似野猪骑士的 trick，做了记录，记得拿出来想想。</p>
+<p>T4 发现可以用笛卡尔树上做线段树合并优化掉 1log，可能比较经典，当作增长经验了，记得检查做题的时候有没有丢掉原信息的什么性质如 dfn 区间做二维偏序可以 1log。</p>
+<h2 id="20251118-赛后总结">20251118 赛后总结</h2>
+<p>打得一般，T3 发挥失常，T2 没有想到分治。</p>
+<p>T3 想到正解但是少考虑了情况，并且大样例过水导致失分。</p>
+<p>T2 没有想到正经做法，一直在想 bitset，导致没有考虑分治做法而失分。还是要记得转换思路，bfs 式思考。</p>
+<p>T1 也花了较长时间，但是做好了思路转换，最后没有掉坑。</p>
+<p>T4 没有仔细思考，前面题目花费了较长时间。</p>
+<p>下次记得简单题也要做思路转换，做完题目后记得检查思路漏洞，时间充裕的要写对拍。</p>
+<h2 id="20251114-赛后总结">20251114 赛后总结</h2>
+<p>表现一般，感觉没有认真对待模拟赛。</p>
+<p>部分原因是早上没清醒，去外面站了 10min 清空了下大脑，避免昏昏欲睡，幸好 noip 前发现了这个问题，下次要注意如果发现自己打瞌睡去外面站几分钟。</p>
+<p>还有是 T1 没有想到关键转化，没有注意到操作 2 可以只做前缀，发现后变成简单题。也可能是一直在暗示自己做不出来，导致大脑放弃思考。</p>
+<p>下次要尝试给自己积极暗示，不要猜想别人会不会这道题，不会这道题会怎么样之类的问题。</p>
+<p>T3 简单推推柿子就会发现答案容易统计，关键在于想到刻画解成排列并列出柿子，赛后看来是简单题，还是缺乏刻画能力，下次要长记性。</p>
+<p>T4 首先要注意到 <span class="arithmatex">\(f(A)\)</span> 的形式，然后进行刻画，待补。</p>
+<h2 id="20251107-赛后总结">20251107 赛后总结</h2>
+<p>T1 比较一眼想到直径上考虑，比较快速写完。</p>
+<p>T2 偶然想到置换环，写了 DP + 二项式反演，但是赛后交流发现有简便组合意义做法，赛时在这里浪费了比较多的时间，下次要注意观察组合意义，思考简便写法。</p>
+<p>T3 用到（可能）比较经典的思路转换，即把不可重（多重限制）转为可重（较少限制），这层转换比较考思维，要注意总结。</p>
+<p>以及随后的 DP 如果设出转移方程会比较容易想到转移，特别注意 CSP2025 T4 犯的错误，仔细思考该如何设计 DP 状态，从简单状态开始，不断补充必需的信息，并去除冗杂状态，检查状态之间是否有包含关系，确保信息“线性无关”。如果实在想不出状态设计可以猜常用的 DP 设计，可以从维度入手（xDyD），也可以从题目要求入手。</p>
+<p>T4 用到比较 ad-hoc（可能，但是好像有人做过原）的构造思路，目标构造序列使得任意 <span class="arithmatex">\(k\in[1,n]\)</span> 存在区间 <span class="arithmatex">\(\text{gcd} = k\)</span>。</p>
+<p>对于一个数 <span class="arithmatex">\(x\)</span> 构造出所有 <span class="arithmatex">\(2^i3^jx\)</span> 的数，考虑如下表格：</p>
+<div class="arithmatex">\[
+\begin{matrix}
+&amp; a &amp; 2a &amp; 4a &amp; 8a &amp; 16a &amp; 32a &amp; \color{red} 64a \\\\
+&amp; 3a &amp; 6a &amp; 12a &amp; 24a &amp; \color{red} 48a &amp; \color{red} 96a \\\\
+&amp; 9a &amp; 18a &amp; \color{red} 36a &amp; \color{red} 72a \\\\
+&amp; 27a &amp; \color{red} 54a \\\\
+&amp; \color{red}81a
+\end{matrix}
+\]</div>
+<p>容易发现按序排红色数即可构造出所有数。</p>
+<p>这样显然只需构造 <span class="arithmatex">\(\text{gcd}(x,6)=1\)</span> 的 <span class="arithmatex">\(x\)</span>，算下代价：</p>
+<div class="arithmatex">\[
+\sum_{i\in[1,n],\text{gcd}(i,6)=1} \lfloor \log_2 \frac n i \rfloor + 2
+ = \sum_{i\in[1,n]} [i \not \equiv 0 \pmod 3] + [\text{gcd}(i,6)=1]
+\]</div>
+<p>对 <span class="arithmatex">\(n \bmod 6\)</span> 分讨发现只会在特点数据下构造出 <span class="arithmatex">\(n+1\)</span> 的解，此时取出两个只有一个点的链并缩掉一个点即可。</p>
+<p>难点在于想出如上表格，当作增长经验了。</p>
+<h2 id="20251031-模拟赛总结">20251031 模拟赛总结</h2>
+<p>T1 考虑到平面最小欧几里得生成树，发现有用的边只有 <span class="arithmatex">\(O(n+m)\)</span> 条，于是签了到。</p>
+<p>T2 调了比较久，主要是花了部分时间写对拍，可能导致后面调 T3 时间有点紧，T4 没什么时间想了。</p>
+<p>T3 写暴力然后发现形式十分优美，于是最后 30min 调出来了，感觉 T3 的拍有点用，T2 的拍有点多余了。</p>
+<p>T4 没啥时间写了个 <span class="arithmatex">\(O(qm\log)\)</span> 做法数据太水冲过去了 70 分，赛后发现是简单 Kruskal 重构树性质题，可以轻松做到单 log，主要原因是一直在想根号做法，导致没有想出啥有用的做法。</p>
+<p>赛时一定要每 10min 反省一下有没有卡死在某思路上没有进展（发呆），如果是的话立马切换状态。</p>
+<p>而且 T1，T2 简单题且大样例较强的不要花时间在对拍上，留时间给后面的题。</p>
+<p>T3 发挥一般，1h+ 调出来了。</p>
+<p>一定要做思路切换。</p>
+<h2 id="20251028-赛后总结">20251028 赛后总结</h2>
+<p>T2 再现重大失误，敲响警钟 /qiao</p>
+<p>但是可能 T2 题面本身不是很清晰，正赛复现的概率不大。但也要自己仔细读题。</p>
+<p>T3 是搜索题，正赛大概不会考（？</p>
+<p>T4 最后 1h 开始冲正解，过了大样例就懒得管，结果最后情况写挂了差点保龄，下次代码实现时一定要考虑清楚情况，多做 safe work，以及多分点时间写对拍。</p>
+<p>不要再读错 T2 题面了 /fendou</p>
+<h2 id="20251027-赛后总结">20251027 赛后总结</h2>
+<p>T2 T3 重大失误，喜提 rank 9。</p>
+<p>T2 读错题意，判定为不可做题，导致只打了 20 分暴力，赛后发现过了一车人。</p>
+<p>T3 想复杂了，赛时加了些不必要的限制，导致无从优化，赛后发现改下形式后可以简单线段树 + 扫描线解决。</p>
+<p>T2 尚不清楚是否能想到正解贪心，感觉赛场上应该没有问题。</p>
+<p>没过 T2 一个原因是没有觉得这是联赛题，判定为不可做，正赛时无论何时都要摒弃这种心理暗示，克服心理障碍，勇于挑战正解。</p>
+<p>第二原因是 T4 做过原题后志得意满，觉得 T2，T3 打暴力就足够了。这是绝对错误的思想，无论是模拟赛还是正赛都不能半场懈怠，切记骄兵必败。</p>
+<p>T3 没有优化不必要的形式限制，导致没有打出正解，下次要仔细思考是否每条限制是否必要，记住细节决定成败。</p>
+<p>感觉最近有点心浮气躁，要牢记学如逆水行舟，不进则退，不要自满，保持谦逊的心态学习。</p>
+<h2 id="-20251025-赛后总结">[*] 20251025 赛后总结</h2>
+<p>T3 猜到了结论，感性理解了一下大概是对的，2h 左右打出来了，后面就没有拿到什么实质性的分。</p>
+<p>T1 之前 LHF 讲过，但是没有改，今天直接阀座。赛后发现是没有注意到若干性质，以及没有想到合适的处理方法，还是偏性质发现的，要多总结这类性质。</p>
+<p>T2 看到题解点分治差不多就会了，感觉还是没有 bfs 式联想算法，要注意总结每类题目常用算法。</p>
+<h2 id="20251022-赛后总结">20251022 赛后总结</h2>
+<p>感觉这场打的还行，主要是 T1 没有拿分。</p>
+<p>T3 一眼树剖板题，但是开始比较困，2h 左右打完了开始对拍。</p>
+<p>这时开 T1,T2，T1 一眼感觉没什么思路，于是开 T2，原本想凑暴力，但是突然想到拆 01 的 trick，然后又发了一会呆想到区间合并的结论，但是赛时想的是离线下来维护每刻时间上的区间，稍微写复杂了，常数因为用了 vector 导致较大，最后 TLE 75 分，改成静态数组就过了。</p>
+<p>最后剩 20min 没有打出 T1 的暴力，赛后发现原来是性质发现题，分类讨论 <span class="arithmatex">\(w,b\)</span> 以及树上某些信息的关系。这启示我看到题面的神秘操作时不要被吓到，要想这并非是要写在代码里的东西，要分析操作的特殊性质，<em>找出它与问题的关系</em>，从而简化它，拆完之后就会发现神秘的东西只是外壳。</p>
+<p>T2 想复杂了，写了离线做法而且常数大，提醒我离线算法并非一定优秀，在写之前要思考是否有简洁做法，如今天这题直接维护当前时刻序列上的信息会比维护时间轴上信息好写。以及慎用 vector 等大常数 STL，卡常的话尽量手写。</p>
+<p>要调整作息，赛前保持充足睡眠。争取每道题都要仔细思考并打暴力防止漏掉简单题。</p>
+<h2 id="20251018-赛后总结">20251018 赛后总结</h2>
+<p>T1 打表加推性质得出合法的充要条件以及答案的计算方式，在 1.5h 左右通过。</p>
+<p>T2 发呆了一会，想到树上 DP 之后过了大样例然后丢了。</p>
+<p>T3 想的比较久，一开始还读错了题，差点判定为不可做题，最后想到计算相邻两项的期望步数然后就光速通过。</p>
+<p>T4 摆烂，打了 25 分暴力走人，但是赛后发现一群人打了 <span class="arithmatex">\(O(nq)\)</span> 暴力拿了 65。</p>
+<p>正解考虑到平衡树中只维护轻儿子的 trick，每次链加修改 <span class="arithmatex">\(O(\log N)\)</span> 个轻儿子的父亲，查询时加入父亲自己还有重儿子的贡献即可，复杂度 2log。</p>
+<p>还是要积累trick，争取增加经验。</p>
+<h2 id="20251017-赛后总结">20251017 赛后总结</h2>
+<p>rk13，<span class="arithmatex">\(100 + 10 + 25 + 60\)</span>，T3 挂了 75 分，感觉不是很满意。</p>
+<p>主要问题在于 T2、T3，T3 首先是打表发现规律后得意忘形忘记要判连通块，导致挂掉 75 分，赛后改个异或哈希就过了。</p>
+<p>下次打完某题要回顾代码以及思路检查有没有中途做了思路转换没有修改遗留的问题，以及切忌心浮气躁。</p>
+<p>T2 没有考虑到直接做前缀 DP，感觉实际上是简单题，但是一直以为不可做，也没有认真思考，导致最后只打了暴力分。以及还有另外 10 分暴力，赛末 15min 没有心思打了，下次打模拟赛还是要静下心来用心思考，切莫半途开香槟。</p>
+<p>T1 写了大常数 <span class="arithmatex">\(O(n \log n)\)</span> 做法，但是没有分析性质做到排序后 <span class="arithmatex">\(O(n)\)</span> DP，下次要注意分析性质，不要一有做法就猛冲，想想常数是否足够优秀，做法是否足够简单，正确性是否有保证，细节是否复杂，bfs 思考后均衡一个性价比最高的做法。</p>
+<p>T4 赛时想到平面图欧拉公式，当时记得是 <span class="arithmatex">\(V-E+F=2\)</span>，但是手玩出反例，然后判定为不可做题，打了 60 pts 暴力走人。但是实际上一般的公式是 <span class="arithmatex">\(V-E+F=1+C\)</span>，之前还遇到过一个 <span class="arithmatex">\(V-E+F=2-2g\)</span> 的，搜了一下还有更一般的公式，感觉记住这两个应该 OI 够用了。以及求矩阵连通块有 <span class="arithmatex">\(O(n \log n)\)</span> 的扫描线加线段树做法，还是做题量不够，要争取增长经验。</p>
+<h2 id="20251007-赛后总结">20251007 赛后总结</h2>
+<p>T1，T3 比较一眼，T4 正难则反思考难度并不高，但是写加调了 2h，从某种程度上导致 T2 的低分。</p>
+<p>T4 ban 区间的时候写的比较复杂，实际上 ban 掉 <span class="arithmatex">\(S \setminus T\)</span> 和 <span class="arithmatex">\(T \setminus S\)</span> 只需要 ban <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(T\)</span> 再撤销 <span class="arithmatex">\(S \cap T\)</span> 就可以了，正赛的时候一定要加快读防止卡常。</p>
+<p>T2 赛时没想清楚状态定义导致转移方程出问题，赛时想的是所有可能的期望之和，但是转移不太相符，改成所有期望的期望会好写很多，可能是期望方程那里本来就在拿期望做等式，所以应定义为期望。以及注意检查是否有忘记取模的情况，有大样例会容易检查。</p>
+<p>下次写大数据结构需要保持正确性同时加快速度以及减小常数，以及记住去年 NOIP T4 的教训，不要一有高分思路就猛冲，要想想是否能更进一步。</p>
+<h2 id="20251012-赛后总结">20251012 赛后总结</h2>
+<p>今天状态比较差，估分 <span class="arithmatex">\(5 + 28 + 12 = 45\)</span>，T2 忘记清空挂成 <span class="arithmatex">\(9\)</span> 分。</p>
+<p>T1 是比较有思维含量的二维数点，赛时转化为基环树后没有进一步想环上的数点，主要是做如下转换：</p>
+<div class="arithmatex">\[
+\lfloor \dfrac {x-y} m\rfloor = \lfloor\dfrac{x}{m}\rfloor - \lfloor\dfrac{y}{m}\rfloor - [x \bmod m \lt y \bmod m]
+\]</div>
+<p>据此可以用 cdq 做到 <span class="arithmatex">\(O(n \log^2 n)\)</span>，1log 做法需要进一步优化掉一位偏序。</p>
+<p>赛时要注意调整状态，以及尽力集中注意力思考题目不要想其他的事情，避免对思维的影响。</p>
+<p>T2 赛时想到小段只有一个点，以及想到了直接贪心跳大段，但是没有仔细思考贪心，只写了 <span class="arithmatex">\(O(qn \log n)\)</span> 的 DP 而且忘记清空挂成 <span class="arithmatex">\(9\)</span> 分，赛时打完代码一定要跑对拍，防止挂分。</p>
+<p>正解考虑大段长度不超过 <span class="arithmatex">\(O(\log V)\)</span>，原因是每次扩展 <span class="arithmatex">\(\sum\)</span> 至少翻倍，利用这一性质更新答案时只用修改 <span class="arithmatex">\(O(\log V)\)</span> 个点的跳跃指针，并且利用弹飞绵羊的根号分治做法可以维护贪心跳大段。</p>
+<h2 id="20251008-赛后总结">20251008 赛后总结</h2>
+<p>可能因为各种奇怪的事情耽误了时间，导致暴力没打全。</p>
+<p>开场先思考了 1h+，感觉 T2 A、B、C 性质都有分拿，T3 有点神秘，T1 不是很会转换。</p>
+<p>打完 T2 A、B、C 性质结果不知道为什么 A 性质单测试点挂 1 分，感觉问题不大。</p>
+<p>最后 30min 开冲 T3 暴力，但是赛时读错了题意导致没有获得部分分。</p>
+<p>下次要调整策略，对每个题目手玩样例，以佐证题意理解。以及优先打比较简单的暴力保证获得足够的分数。</p>
+<p>T3 赛后发现点减边容斥可以获得 58 分，首先要正确理解题意并熟练掌握这类 trick，争取拿到高档部分分。</p>
+<p>T1 有低年级选手获得 80 部分分，运用了较复杂的 DP，要注意完善最优化 DP 与计数 DP 的熟练度，争取巩固基础。</p>
+<p>正解是继续优化 DP，还有一种利用性质转换为 Hall 定理并 DP，可能会有不一样的形式，需要分讨。</p>
+<p>T3 正解用到的求 <span class="arithmatex">\(n! \mod p^k\)</span> 的算法比较巧妙，要注意总结这类 trick。</p>
+<p>T2 正解是将路径匹配贪心在一起，类似树上 DP，要注意有较多 case，赛时遇到这类题应该往自己熟悉的算法上思考，大胆猜想并举反例。</p>
+<p>T1 是较复杂 DP，待补。</p>
+<h2 id="20251007-赛后总结_1">20251007 赛后总结</h2>
+<p>T1，T3 比较一眼，T4 正难则反思考难度并不高，但是写加调了 2h，从某种程度上导致 T2 的低分。</p>
+<p>T4 ban 区间的时候写的比较复杂，实际上 ban 掉 <span class="arithmatex">\(S \setminus T\)</span> 和 <span class="arithmatex">\(T \setminus S\)</span> 只需要 ban <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(T\)</span> 再撤销 <span class="arithmatex">\(S \cap T\)</span> 就可以了，正赛的时候一定要加快读防止卡常。</p>
+<p>T2 赛时没想清楚状态定义导致转移方程出问题，赛时想的是所有可能的期望之和，但是转移不太相符，改成所有期望的期望会好写很多，可能是期望方程那里本来就在拿期望做等式，所以应定义为期望。以及注意检查是否有忘记取模的情况，有大样例会容易检查。</p>
+<p>下次写大数据结构需要保持正确性同时加快速度以及减小常数，以及记住去年 NOIP T4 的教训，不要一有高分思路就猛冲，要想想是否能更进一步。</p>
+<h2 id="20251005-赛后总结">20251005 赛后总结</h2>
+<p>感觉 T2 发挥比较好，T1，T3 没有拿到优秀的分。</p>
+<p>T1 赛时想到 exchange argument 然后 DP，但是写 DP 时忘记使用 ex arg 的编号导致拍出错来然后以为不是正解，这非常不应该，以后写代码要认真思考，学会静态 debug，然后是没有发现开始减少代币时 <span class="arithmatex">\(T&gt;1\)</span> 的只会选 <span class="arithmatex">\(O(\log V)\)</span> 个，还是要注意观察性质。</p>
+<p>T2 赛时想到了比较好实现的 <span class="arithmatex">\(L=0,R=M-1\)</span> 做法，但和正解没有太大关系。</p>
+<p>T3 赛时只拿了输出消息数量的部分分，应该留时间打 8pts 暴力。还有 AC，BC 几档欧拉回路的部分分还是很高分的，要仔细思考这类题不要因为没花时间失去可以拿到的部分分。</p>
+<p>T2 如果从割的角度考虑应该可以拿到更高的分，以后要注意思路转换。</p>
+<p>upd: T3 打完 AC, BC 性质后拼上暴力有 60pts，还是要注意拼高档部分分。</p>
+<p>正解需要注意到将一条边改成学术边会对答案造成怎样的贡献，转化为网络流模型，并利用单位网络上 Dinic 的特殊时间复杂度做到 <span class="arithmatex">\(O(m \sqrt n)\)</span>。</p>
+<p>以及注意观察二元环可以直接缩点即可获得正解。</p>
+<p>赛时要认真考虑每一档部分分，顺着特殊性质一点一点写有机会拿到较高的部分分，一定要注意大胆猜想，小心求证。</p>
+<h2 id="20251004-赛后总结">20251004 赛后总结</h2>
+<p>感觉今天精神状态不是很好，应该是早上没睡好。</p>
+<p>首先是 T1 赛时没有想到后半部分怎么排序，可能手玩一下也能玩出来，还有暴力没开 <code>long long</code> 导致爆 0。</p>
+<p>T2 发挥正常，可能思维难度偏低但是没有想到平衡树维护链。</p>
+<p>T3 发挥比较失常，最后一种情况用 bitset 写挂了，可能是因为没有大样例。这也导致 subtask 2 没有拿到期望的部分分。</p>
+<p>T1 感觉四维偏序还是比较板的，不知道为什么没有想到，可能要补一下 exchange argument。</p>
+<p>T3 没有想到三元环计数，大概又是思维转换出了问题。</p>
+<p>T2 待补。</p>
+<h2 id="20250927-赛后总结">20250927 赛后总结</h2>
+<p>感觉发挥一般，T3 严重失误。</p>
+<p>开场发现 T1 计算几何不是很难，T2 神秘凸包感觉可以 <span class="arithmatex">\(nm\)</span>，T3 惊觉原题但是忘记线性规划形式而且忘记如何对偶，感觉这道题很 educational 需要做个记录。</p>
+<p>对着 T3 想了 2h 线性规划形式，无果。然后写了 T1 <span class="arithmatex">\(O(\dfrac {n^4 \log V} \omega)\)</span> 感觉能拿高分于是写了 T2,T3 暴力。</p>
+<p>最后 <span class="arithmatex">\(75+10+20=105\)</span>。</p>
+<p>T1 被卡其实不太意外，主要在于没有想到求特殊性质的二分图是否有完美匹配可以用 Hall 定理，导致失分。</p>
+<p>T2 没有花太多时间，但是部分分可以达到 50 分。</p>
+<p>T3 省集时做过，但是没有认真复习，这是严重的失误。</p>
+<p>抛却原题不会的问题，理应想到决策单调性的 <span class="arithmatex">\(O(n^2)\)</span> 档部分分 (+20)，正式比赛时一定不能因为某道题有希望 AC 而放弃规划时间。</p>
+<p>今天的比赛如果照常发挥应该不会如此低分，主要问题是为了 T3 正解浪费太多时间，要知道比赛分数是第一关键字，有没有切题是次要的。</p>
+<p>下次不应为一道小概率 AC 的题目花超过 1.5h 的时间，在没有写满暴力的情况下不应在一道题目上花超过 2h 时间。</p>
+<p>还有就是 T1 的 <span class="arithmatex">\(\dfrac {n^4} \omega\)</span> 到 <span class="arithmatex">\(n^2 \log n\)</span> 并没有什么代码难度，还是考察了 Hall 定理的运用，偏思维与套路。</p>
+<p>以及 T1 中求夹角花费了较多的时间，没有考虑到余弦定理，要抽时间总结套路与定理。</p>
+<p>T2 感觉主要是时间不足了，只剩了不到 30min 写代码，只能拿 10 pts。正式比赛时最基础的暴力一定不能丢，这是基础大众分。没有这些支持后面的优化无从谈起。</p>
+<p>T3 的线性规划对偶形式没有熟练掌握，以及没有掌握把题目问题归约到线性规划形式的技巧，这是短板，要记得补缺。</p>
+<p>upd: T2 为避免精度误差需要写带分数（奇怪的经验又增加了），然后需要注意一堆边界问题，大概过样例就能过了。</p>
+<p>还是要注意细节。</p>
+<h2 id="20250817-模拟赛总结">20250817 模拟赛总结</h2>
+<p>第一题比较简单，画了几下就出了思路，求个下界并构造方案即可。</p>
+<p>第二题花了比较长的时间，但是最后好像写的是个假的做法，可能 <span class="arithmatex">\(O(n^5)\)</span> 但是也不知道为什么能过。</p>
+<p>考虑如果没有第一天就走完的话肯定会从某个城市 0 点出发，后面的最短路直接 <span class="arithmatex">\(O(n^3)\)</span> 预处理（赛时没有注意到稠密图 dij 可以不加堆优化去 log）。
+然后考虑从 <span class="arithmatex">\(u\)</span> 的时刻 <span class="arithmatex">\(t\)</span> 出发到某个城市等到天亮，直接枚举 <span class="arithmatex">\(i\)</span>，判断的话从终点倒着跑，即 <span class="arithmatex">\(\text{dis}(v) \gets \min(\text{dis}(u),C) - L\)</span>，判断起点的 <span class="arithmatex">\(\text{dis}\)</span> 是否 <span class="arithmatex">\(\ge t\)</span> 即可。
+赛时这里写了个大暴力，就是从起点正着跑 dij 并维护 <span class="arithmatex">\(t\)</span> 的限制，在终点得到若干如果 <span class="arithmatex">\(t \le p\)</span>, 那么可以用 <span class="arithmatex">\(q\)</span> 的时间跑到 <span class="arithmatex">\(v\)</span> 的二元组 <span class="arithmatex">\((p,q)\)</span>，导致复杂度未知。
+一天内到的考虑枚举最紧限制的边 <span class="arithmatex">\((u,v,L,C)\)</span>，从 <span class="arithmatex">\(u\)</span> 倒着从 <span class="arithmatex">\(C-L\)</span> 时刻开始跑，从 <span class="arithmatex">\(v\)</span> 开始跑 <span class="arithmatex">\(C\)</span> 时刻的最短路，但是不能越过一天的时刻。
+然后一个路径 <span class="arithmatex">\((x,y)\)</span> 就有如果开始时刻 <span class="arithmatex">\(t \le p\)</span>，那么可以在一天内用 <span class="arithmatex">\(q\)</span> 的时间跑完的二元组 <span class="arithmatex">\((p,q)\)</span>，排序后可以二分找最小值。注意到排序的关键字 <span class="arithmatex">\(p\)</span> 只与 <span class="arithmatex">\(u\)</span> 和枚举的边有关，所以排序可以做到 <span class="arithmatex">\(\mathrm O(nm \log n)\)</span>。</p>
+<p>总时间复杂度 <span class="arithmatex">\(\mathrm O(n^3+n^2m+nm \log n+q(n+\log m))\)</span>。</p>
+<p>第三题是神仙计数，把后缀数组映射成若干</p>
+<h2 id="20250815-模拟赛总结">20250815 模拟赛总结</h2>
+<p>极其炸裂的一场。</p>
+<p>首先是 T1 疑问了很久只想到了 <span class="arithmatex">\(O(n^4)\)</span> 的爆搜，然后发现不知道怎么优化，乱搞了很久才勉强卡过大样例，不是很有信心。</p>
+<p>T2 压根没怎么思考，时间卡的太紧了，T3 想了很久的 40 pts，</p>
+<h2 id="20250813-模拟赛总结">20250813 模拟赛总结</h2>
+<p>T1 赛时没有仔细思考，但是看题解 dfs 序背包后基本就会了，说明是 trick 掌握得不够充分。以及 trick 不足的时候要善于发散思维。</p>
+<p>主要重心在 T2 上面，发现了不同差分只有 <span class="arithmatex">\(O(n)\)</span> 之后一直在想如何优化，但是无果。赛后发现是和之前的一道计数题一样拆 01，感觉没有很掌握这个 trick。
+然后根据贪心过程建立凸包，利用较小的值域做二维差分。</p>
+<p>T3 一开始以为是偏题，结果发现是网络流加最小乘积相关，遇到自以为不可做的题还是要充足地思考部分分并尝试正解其中 <span class="arithmatex">\(k=3,4\)</span> 的 subtask 是容易的，没想到可能是没有认真思考题目限制，并推导性质，下次应避免这种错误。</p>
+<p>upd: T1 写了一下，感觉没有很掌握这种 trick，或许有空回来看看。</p>
+<h2 id="2025812-模拟赛总结">2025.8.12 模拟赛总结</h2>
+<p>T1 赛时想了个 <span class="arithmatex">\(O(\dfrac {n \log \omega} \omega)\)</span> 的做法被卡成 55，发现把线段树去掉换成暴力就能过。还是平衡得不够好，要考虑到修改开销极少所以可以平衡修改和查询的复杂度。</p>
+<p>T2 赛时写了个 <span class="arithmatex">\(O(n^4)\)</span> 水法跑得飞快，赛后加个 random 就能卡过去（？）不过可能正式赛拿不了这么高分，还是要努力想正解。
+主要是考虑只放横着的情况，翻转后再做两遍，发现每个极长的空段（<code>s,t</code> 分开）缩成点，两两之间可达连边之后求圆方树，一定只有 <code>s-t</code> 路径上的圆点合法。
+考虑一个合法的极长空白段，双指针求出以每个格子为左边界时右边界最小在哪里，充要条件需要维护左右边未选的格子与 <code>s,t</code> 的连通性，以及左右之间的连通性，可以通过在圆方树上给节点打标记等操作 <span class="arithmatex">\(O(1)\)</span> 移动端点，于是做到 <span class="arithmatex">\(O(n^2)\)</span>。
+需要注意思路的转化，从缩点到圆方树都有着不小的思考难度。</p>
+<p>T3 奇妙计数题，从 m 比较小的 case 出发，从一开始枚举第二行的匹配到推成部分错排的式子，然后用两种不同的转移式使用 <span class="arithmatex">\(D_n,D_{n-1}\)</span> 递推做到线性，感觉计数中的思维转化比较困难，例如错排的两种递推式。有空要练习 <span class="arithmatex">\(\Sigma\)</span>。</p>
+<h2 id="20250226-联考省选模拟赛后总结">2025.02.26 联考省选模拟赛后总结</h2>
+<p>今天做的中规中矩，T1 打个表发现结论马上做完了，看了下 T2，感觉像是根号重工业，想冲的时候忍住了，转去做 T3。</p>
+<p>T3 想到了树上 DP，做了一个 l=r 的 <span class="arithmatex">\(O(n^2)\)</span> 做法，然后想写一个树上背包 <span class="arithmatex">\(O(n^2V)\)</span> 的做法，但是没调出来，最后寄了。</p>
+<p>最后不到 30min 写了一个 T2 的暴力，拿了 28pts，sub1 MLE 了。</p>
+<p>感觉发挥不完全，大部分时间浪费在 T3 上了，最后一点多余的分没拿到，感觉和昨天犯的错误一样，没有合理分配时间，最后几个小时白白浪费掉了。</p>
+<p>主要也是能力问题，能拿的分大部分都拿了，实在不会才放弃。</p>
+<p>T2 的根据询问对序列分块是非常有趣的 trick，赛时没想到应该是思维僵化了，正解是一只 log 的动态树 + 历史和，十分难写，赛场上应该写根号会好一些。</p>
+<p>T3 是先把计数转化为枚举分界点背包，然后发现背包的结果是关于分界点的 n 次多项式，然后做前缀和可以插值得到前缀和函数然后求函数区间和，感觉很神奇。</p>
+<p>总结来说感觉是能力不够，思维过于死板以及经验不足。T3 大概是 22 年省选的填树，但是没做过，感觉很亏。</p>
+<p>这次是最后一次模拟了，希望省选考出好成绩，不要犯同样的错误，放平心态，争取高分！</p>
+<h2 id="20250221-联考省选模拟总结">2025.02.21 联考省选模拟总结</h2>
+<p>感觉今天做得挺烂，总共 <span class="arithmatex">\(40 + 15 + 12 = 67\)</span>。</p>
+<p>T2 感觉不是很难，但是赛时不知道为什么一直没有想到上下界，于是寄掉了。赛后想到上下界之后就可以 DDP 或者换根 DP，不是很难写。</p>
+<p>T3 是一个推公式题，主要用到了单位根反演以及诸类定理，感觉这些推柿子的 trick 还不是很熟，以后要多加练习。</p>
+<p>T1 是根号分治，有容斥可以做到 <span class="arithmatex">\(O(\frac n k)\)</span> 和 DP 可以做到 <span class="arithmatex">\(O(n)\)</span>，平衡一下可以做到 <span class="arithmatex">\(O(q \sqrt n)\)</span>，还有神奇的生成函数做法，感觉十分妙。</p>
+<p>其实 3 题中只有 T3 的式子比较难推，其他都不难想，关键在于思维不够开放，如 T1 没想到是根号分治，一直在想 <span class="arithmatex">\(\text{poly}(\log)\)</span> 做法，还有 T2 没有思考到上下界，感觉很亏。</p>
+<p>最后是效率问题，T3 最后只剩 30min 左右打暴力，导致没怎么拿分，以及那些神奇的式子感觉不是乍一看不是很难，但是正着推是很有难度的。</p>
+<p>总而言之，今天表现差强人意，主要是心态和策略问题，还有思维不够拓展，希望省选前能调整好状态，积极备考。</p>
+<h2 id="20250220-联考省选模拟总结">2025.02.20 联考省选模拟总结</h2>
+<p>今天状态感觉不错，T1 感觉一眼模拟，属于签到题。然后看 T2，一开始看是计数题感觉没什么想法，最后想着想着居然想到了 <span class="arithmatex">\(O(n^2)\)</span>，顺便把性质分也拿了，总共 84 分，花了 1.5h。</p>
+<p>这时回去开 T1，打打想想地最后花了 1.xh 的样子过了拍，于是开始看 T3，感觉没什么想法，写了个暴力加贪心发现能够过掉第二档分，于是果断提交。</p>
+<p>赛后得分 <span class="arithmatex">\(100 + 84 + 35 = 219\)</span>，自我感觉良好。</p>
+<p>但是 T2 在原来的基础上加一个简单线段树就可以了，可能是形式写的不是很好看，没有想到用数据结构优化，半步正解。</p>
+<p>T3 神秘 DP，待改。</p>
+<p>总体来说，今天发挥不错，但是不排除题目恰好擅长的嫌疑。</p>
+<p>题目难度感觉和前几天差不多，但是今天汲取了之前的教训，效率变高了，因此给每道题留的时间就多，自然分数变高了。</p>
+<p>还有就是 T2 获得 84 分之后果断放弃剩下的 16 分，转而打了 T3 35 分暴力，以退为进，顾全大局，但如果最后能再留一点时间的话，应该把 T2 冲出来，争取锦上添花。</p>
+<p>希望明天也能保持好状态。</p>
+<h2 id="20250218-联考省选模拟总结">20250218 联考省选模拟总结</h2>
+<p>T1 简单树上背包，1.5h 时过了。</p>
+<p>T2 没什么想法，于是去打 T3 <span class="arithmatex">\(O(n^2)\)</span> 暴力。最后想到点集内距离最远的点一定是直径端点之一，于是把两个点拿出来，求带权中点后大力分讨即可。</p>
+<p>T3 写的比较久，用了 2~3h，于是只打了 T2 25pts 暴力。</p>
+<p>最后总分 <span class="arithmatex">\(100 + 25 + 40 = 165\)</span>，自我感觉挺满意的，比之前好了不少。</p>
+<p>T2 赛时没有发现只有 <span class="arithmatex">\(O(V \log V)\)</span> 个状态，于是没有进一步思考，也错失了高分部分分，赛后发现这个性质可以直接做到 <span class="arithmatex">\(O(n V^2 \log V)\)</span>，说明善于思考事半功倍。</p>
+<p>然后转移的时候有一些限制形如某两个参数互质，于是用莫比乌斯反演可以将 A 性质做到 <span class="arithmatex">\(O(n V \log V \log \log V)\)</span>，主要用到了Dirichlet 前/后缀和。然后进一步将 <span class="arithmatex">\(r-l=2\)</span> 的限制 2 处理，需要继续推式子，然后便仍可以做到相同的复杂度。</p>
+<p>其实一眼 T2 感觉就是推式子然后反演，但是最后只剩 30min 给 T2，没时间细想，不然的话应该是可以拿到 A 性质分的。归根结底还是 T3 花的时间太长，说明对树相关的算法的熟练度不够，以及思考得比较久，应该减少时间上的浪费。</p>
+<p>T3 赛时拆成直径端点与中点相关的贡献，实际上正解就是继续将其拆成 <span class="arithmatex">\(\text{dep}(x) + \text{dep}(y) - 2 \times \text{dep}(\text{lca}(x,y))\)</span> 的形式去做贡献，这样可以简单的拿到 C 性质不带修的分。</p>
+<p>接着利用带权树状数组可以带修，总结下来还是思路不够拓展，根据 dis 想到相关公式后分开维护是关键点，以及赛时没有想到用线段树维护直径端点，也是思维的问题，导致没有拿到更高的部分分。</p>
+<p>总体来说，今天的表现有所改进，赛末也没有躺平，赛时拿分也比较稳，应该保持这种状态。美中不足的是 T2,T3 都有一些小瑕疵，主要原因是效率不高导致没有足够时间思考，以及缺少 bfs 式思考，下次要尽可能弥补这些遗憾。</p>
+<h2 id="20250217-联考省选模拟总结">20250217 联考省选模拟总结</h2>
+<p>今天总分 132，联考排名 60+。</p>
+<p>T2 莫反练习题，2h 的时候切了。</p>
+<p>T1 直觉是 DP，然后启发式合并之类的优化，但是最后死活没推对转移式，于是遗憾离场。赛后发现是初始化的时候出了问题，与正解只有一步之差，失之交臂。赛后还发现只用开 40 位 DP 数组，但是不会证明。</p>
+<p>T3 显然是 <span class="arithmatex">\(O(n^2)\)</span> DP，赛时写了 A、C 性质结果没有贪心高，十分失策。正解难在列出正确的 DP 式并再度优化。赛时遇到 DP 题应该尽可能的先写出 DP 式，迈出第一步是成功的一半。</p>
+<p>总结下来，今天 T2 表现正常，T1 十分可惜，这也是赛时最后无所事事觉得自己调不出来便摆烂，如果用来阅读代码说不定就已经过了。</p>
+<p>T3 发挥的一般般，下次遇到这种题应该先写一个高次幂复杂度做法，而不是望洋兴叹。</p>
+<p>总体感觉状态不是很好，很大原因时没有把这个当正式省选，明天争取稳定心态，超常发挥。</p>
+<h2 id="20250211-联考省选模拟总结">20250211 联考省选模拟总结</h2>
+<p>今天三题 <span class="arithmatex">\(60 + 50 + 4 = 114\)</span>，排名不高，表现一般。</p>
+<p>T1 赛时写了一个组合式，可以在 <span class="arithmatex">\(O(n^2)\)</span> 内求出，最后没想到怎么化简。赛后看发现是正难则反，对每个格子分别计算，由于格子总数有限，直接枚举即可 <span class="arithmatex">\(O(n)\)</span>，只需要一点简单的预处理。</p>
+<p>T2 之前应该是做过，但是赛后没有改完，导致没有什么思路，最后拿了 50 较低部分分，还另有 20 分是分块做法，半正解，但是一直以为是 <span class="arithmatex">\(n\text{poly}(\log n)\)</span>，没有往分块上面想。</p>
+<p>T3 不是很读懂题目，赛时误以为“子序列”是连续的一段，导致最后答案出了差错却没找到问题。但是靠输出两个 0 拿到了 4 分。正解是 NTT 加速 DP，难点在于推式子，还是要加强计数 DP trick 练习。</p>
+<p>这次比赛主要失误在于 T1 半步正解却不自知，遗憾失之交臂，同时暴露了我思维定势的严重性，赛时应给予自己“我能做出来”的暗示，而非轻易放弃最后的机会，望而却步，同时拓宽思维，bfs 式思考，以及熟记常用 trick 与思路方便寻找解法。</p>
+<p>同样严重的问题出在 T2，之前做过的题如今还是只拿 50 分，很大程度上反映了我改题效率的低下以及消极性，同一个坑不能摔第二遍这是最基本的要求。以往我对赛后改题以及杂题练习的积极性都不高，在一段时间之内没有什么明面上的问题，但是长此以往必成大患，这次 T2 给我敲响了警钟，我应该抓紧每一分每一秒改题与思考，不要被其他事情吸引了注意力，丢弃一些花里胡哨的东西，争取下次看到改进。</p>
+<p>T3 吃的亏同样是可以避免的，某种意义上来说也是一种潜意识里的思维定势，即看到“子序列”便默认为连续而非考虑一下到底是哪种，这不仅造成错解题意，还浪费了大量的时间。下次应该集中注意力认真仔细审题，为拿高分奠定好的基础。</p>
+<p>除此之外，还有一个我常犯的错误，就是比赛中后继乏力，最后 1~2h 便开始打算放弃，躺平，最后只拿了非常少的部分分，基本是没有任何技术含量的。这是一个非常大的损失，整场比赛总共 4.5h，省选时是 5h，而这最后的时间如果拿来作某些题已经可以出正解了，如果实在不行，再多拿 20 ~ 50 分是绰绰有余的，但是因为前面思考过之后，后面就抱着“反正大概都不会了”的心态等待比赛结束，但是这样的结果一定是遗憾离场。所以，比赛最后打完有把握的部分分之后，应该继续思考，努力拿下高分，而不是东搞西搞，以正式赛的态度对待每一场模拟赛，最后才能以平常心应对省选。</p>
+<h2 id="20240205-模拟赛总结">20240205 模拟赛总结</h2>
+<p>今天 T1 一眼感觉不是很难，但一时间想不到思路，T2 题意一塌糊涂，也不怎么会做，于是跳过，T3 感觉 DP。</p>
+<p>上午比较困，思前想后迷迷糊糊过了 2h，大概 10:35 想到 T1 高斯消元正解，打完大概剩下 50min，于是去打 T3 部分分，最后写了第一档和性质 A。</p>
+<p>总分 100 + 0 + 22 = 122，排名 3。</p>
+<p>还好没有挂分，名次还可以。</p>
+<p>赛后看了下 T2 发现是点不能相交，于是可以通过统计单条路径做（好像是 LGV 引理），转化之后再用神奇的计数 DP 做即可。</p>
+<p>T3 是 NTT 辅助计数 DP，主要是不会推转移式，日后要加强练习。</p>
+<p>感觉美中不足的地方在于 T3 <span class="arithmatex">\(O(n^3)\)</span> 和 <span class="arithmatex">\(O(n^2 \log n)\)</span> 不是很难，没有仔细思考，以及 T2 题意懵懂，下次要注意改进。</p>
+<h2 id="20241217省选组模拟-赛后总结">2024.12.17【省选组】模拟 赛后总结</h2>
+<p>今天的题都不是很会做，先看了 T1，感觉有点像 DS，然后发现答案是凸的，感觉好像没什么用。
+这时看 T2，只会指数级暴力于是跳过了。</p>
+<p>T3 感觉有点性质，手推了一些真值表，发现没有什么有用的运算，于是打了前两档暴力。</p>
+<p>这时已经剩下不到 2h，于是又回去看了 T1，发现有一个很对的贪心，于是写了一颗线段树就过了。</p>
+<p>最后一点时间打了 T2 的暴力。</p>
+<p>赛后发现 T3 的暴力没分，原因是 <span class="arithmatex">\(n=0\)</span> 时的处理出了问题，还有挂了一个细节，然后就寄了。</p>
+<p>T1 100pts，T2 10pts。赛后看 T2 才发现做法和之前 A 组的一道 T4 差不多，都是完美匹配计数，做法也类似，但是这道题正解似乎是通过发现性质用 LGV 引理做不交路径计数。以前做过的题却没有联想到一起，说明印象不够深刻，之前改题时没有认真思考原因，以后应避免这样的疏忽。</p>
+<p>T3 的失分原因之一是题面不是很清晰，第二是没有认真实现代码，第三是没有写 checker 验证正确性，下次构造题应先写一个 checker 防止爆 0。</p>
+<p>T3 的正解是先挖掘一些性质，然后通过形式化构造过程发现一些步骤可以省略，于是得到正解。</p>
+<p>感觉积累了一点构造题的经验，下次遇到这类题目要融会贯通，学以致用。</p>
+<p>总的来说，这场比赛 T1 发挥的比较好，最后发现了结论，但是 T2 没有想到之前写过的题的解法，以及 T3 没有写 checker 导致爆零，都是不应该犯得错误，要避免。</p>
+<h2 id="20241128noip2024终极模拟-赛后反思">2024.11.28【NOIP2024】终极模拟 赛后反思</h2>
+<p>赛时 T1 很快过了，T2 打了很久的暴力与乱搞，最后想到 BFS，赛时没有证明复杂度，实际上是 <span class="arithmatex">\(\mathrm{O}(m^2 2^m)\)</span> 的。</p>
+<p>打完前两题剩下 2h，这时先打了 T3，T4 各 30pts 的暴力，然后再想 T3 的性质分，但是昨晚没睡好，导致后半程迷迷糊糊的，最终没有想出来。</p>
+<p>赛后一看 260pts，排名 12。</p>
+<p>感觉发挥一般般，T1,T2 还 OK，T2花的时间有点长，但是并没有很大影响。</p>
+<p>260 是大众分，所以按常理来说并不是很糟糕，稳健也是一大得分点。</p>
+<p>主要区分度体现在 T3 的性质分，实际上是一个观察，但是赛时没有集中注意力观察序列特征，于是没有得到这档分。</p>
+<p>主要原因是晚上没有休息好，但是也因为自己觉得没有什么人能做出这档分，于是自己就放弃了。</p>
+<p>这种想法是十分错误的，因为自己做题不应总是想着随波逐流，跟着别人走，应该尽自己最大的努力争取，不留遗憾。</p>
+<p>T4 没有想到分组后贪心选，导致只会指数级暴力，没有拿到 60pts 部分分，赛后发现其实不是很难，主要是开始的发现与 DP 无环的证明，还是要多发现性质。</p>
+<p>总体来说，这场比赛没有挂分，打得很稳，但是还是有必要调整一下状态，争取在 NOIP 拿到好成绩。</p>
+<h2 id="1127noip模拟十六-赛后总结">11.27noip模拟十六 赛后总结</h2>
+<p>今天打的不是很好，总分 188，校排名 14。</p>
+<p>首先是 T1，赛时没有想到会有重复的 <span class="arithmatex">\((a,b)\)</span> 对，挂了第一个点，还好不是很多。</p>
+<p>T2 没有想到就是一个简单的随机化 + 调整。赛时因为没有看见要保证第一个和最后一个格子要保证有解，挂掉了 <span class="arithmatex">\(L=0\)</span> 的点，只有 14pts。</p>
+<p>T3 想到基本的 <span class="arithmatex">\(O(n^4)\)</span> 做法，其实离正解只有一步之遥，每次只要暴力乘除多项式就可以了。</p>
+<p>T4 拿到了 64pts 部分分，已经很不错了，但是没有想到 <span class="arithmatex">\(|v|\)</span> 是 <span class="arithmatex">\(O(\sqrt{n})\)</span> 级别的，以及数组没有开够，挂了 B 性质的分，赛后又改了一下，有 80pts。</p>
+<p>通过这四道题的失分情况可以看出，挂的都是一些细节分，很多细节拼凑起来，就算没有想到什么正解方向的做法，也有很多的部分分，下次要注意细节，仔细不丢分。</p>
+<h2 id="1125noip模拟十五-赛后总结">11.25noip模拟十五 赛后总结</h2>
+<p>赛时先开 T1，优化常数后发现只会 70pts，于是没管，直接跳到 T2。</p>
+<p>发现 T2 比较水，读完题后直接跳到 T3。</p>
+<p>T3 思考的比较久，主要是没想到怎么遍历非连通块内且没有连边的点。最后发现不用一定没有连边，因为最多跳过 <span class="arithmatex">\(\mathrm{O}(M)\)</span> 次，于是想到线段树合并加二分。但是赛后发现其实可以用 set 维护，总之没有写很长，加上快读 3k。</p>
+<p>T2 补了一个扫描线加线段树就 finished 了。</p>
+<p>T1 又瞪了一会，发现还是不会，于是就滚去看 T4。</p>
+<p>T4 看了一会直接懵掉，被硬控了很久，最后打了一个过不了大样例的贪心，只有 8pts。</p>
+<p>总分 278pts，校内排名 7。</p>
+<p>发现 T1 就是在原本的基础上把素数的枚举范围缩减到 <span class="arithmatex">\(\mathrm{O}(\sqrt[k+1]{n})\)</span>，原理是枚举到超过这个数之后，如果还有贡献就一定要是某个正整数的 <span class="arithmatex">\(k\)</span> 次方，直接开 <span class="arithmatex">\(k\)</span> 次方就好了。</p>
+<p>然后 T4 有个经典结论，就是最优情况下每条边会经过恰好两边的连通块点权和的 <span class="arithmatex">\(\min\)</span> 次，以 <strong>带权重心</strong> 为根，那么 <span class="arithmatex">\(\sum dep_i \times v_i\)</span> 就是答案。</p>
+<p>知道结论后可以直接拿到 <span class="arithmatex">\(\mathrm{O}(nm)\)</span> 的 36pts。</p>
+<p>接着用一些换根DP的手法就可以处理出答案。</p>
+<p>比赛中不应该丢的分就是 T1 的 30pts，和 T4 的 36pts 部分分了。</p>
+<p>两者的共同之处在于与目标仅有一步之遥，但是没有想到，于是失之交臂。</p>
+<p>以后拿到分之后要再努力地往深处想一想，努力多拿一点分，积少成多。</p>
+<p>今天 T2，T3 打的不错，用时差不多，T3 可能思考的时间略微多了一点，以后要再进一步。</p>
+<h2 id="20241120-模拟赛总结">2024.11.20 模拟赛总结</h2>
+<p>今天总分 215，校排名第 6。</p>
+<p>一眼 T1 没什么思路，然后看 T2 好像可以优化 dijkstra，很快打完写完对拍后开始看 T3，发现是 SG 函数，写完之后又写了一个拍。</p>
+<p>但是只会 <span class="arithmatex">\(O(nm)\)</span> 暴力求 mex，最后 T1 还是不会，跑去看 T4，发现就是一个 hash 加 fenwick，这时大概剩下 1h 多，于是光速打完过了大样例就交了。</p>
+<p>T1 一直到比赛结束都没有思路，只好拿了 15pts。</p>
+<p>赛后发现 T2,T4 切了，但是 T3 MLE，一看原来是开了 <span class="arithmatex">\(5 \times 10 ^ 6\)</span> 个 <code>set</code> 爆炸了。改过来后有 40pts。</p>
+<p>T1 就是一个贪心 + 证明，最后套一个二分 check，感觉不是很难，但是赛事没有留时间推性质，最后遗憾离场。</p>
+<p>T3 MLE 的问题比较严重，下次一定要记得在最后提交前测一下 memory，尤其是 256MB 的限制。</p>
+<p>T3 的正解实现不是很难，主要是赛时没有想到维护缺失的位置，导致没能得到高分。</p>
+<p>T2 如果从差分的角度来想会更简单好打，下次要拓宽思维。</p>
+<p>总体来说，今天时间分配较为合理，但还是要给每道题留出足够的时间。T2,T4 打的很快，说明代码实现能力有所提高，但是缺乏思维上的深度，今后训练要尤为注意这一点。</p>
+<h2 id="20241118提高组模拟-反思">2024.11.18【提高组】模拟 反思</h2>
+<p>T1 水题，T2 感觉很有性质，但是最后没有推出来，只有 80pts。T3,T4 都不太会做，最后只拿了基础分。</p>
+<p>赛后一看总分 210，排名很后，大众分大概到 300。</p>
+<p>主要原因是 T2 最后那个排序后最优解相邻的性质没推出来，T3,T4 暴力分没打满。</p>
+<p>T3 不是很难，但是赛时没有花很多时间，导致只打了最基础的暴力。</p>
+<p>T4 主要是一个 DP，而且基本没有什么难度，应该是赛时觉得不可做于是没有花时间。</p>
+<p>这场比赛打的不是很好，主要是因为推 T2 推了很久，导致 T3,T4 没有找到性质。</p>
+<p>下次要碰到不会的题就跳，不应觉得先做 T2 才能往后做，不要给自己压力。</p>
+<h2 id="20241123-训练总结">20241123 训练总结</h2>
+<p>今天模拟赛总分 207，校内排名 12</p>
+<p>比赛开始时一眼觉得 T2 很有性质，有点像矩阵乘法或者线段树，最后想到分块，发现是一个卷积形式，于是打了 <span class="arithmatex">\(O(n \sqrt {n \log n})\)</span> 的正解，但是因为常数过大导致只有 52 分，调大块长就过了，以后要减少 NTT 的常数。</p>
+<p>T3 由链的性质拓展到树上，还是比较好想的。</p>
+<p>T1 比赛时没有想到求期望排名，主要也是最后没有时间打了，以后要合理安排时间，争取在短时间内拿到高分。</p>
+<p>T4 主要是难在找到性质，只要找到了就很好做，下次应分配时间思考这类题。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+    data-repo="lnw143/blog"
+    data-repo-id="R_kgDOPq8NMw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOPq8NM84CvC_0"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+          <div class="md-copyright__highlight">
+            Copyright © 2024-2025 Liam<br>© 本页面的全部内容在 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a> 协议之条款下提供，附加条款亦可能应用
+          </div>
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        & 
+        <a href="https://github.com/features/actions" target="_blank" rel="noopener">
+          GitHub Actions
+        </a>
+      </div>
+      <div class="md-social">
+        <a href="https://github.com/lnw143" target="_blank" rel="noopener" title="github" class="md-social__link">
+          <img src="https://github.com/fluidicon.png" alt="github">
+        </a>
+        <a href="https://www.luogu.com.cn/user/767819" target="_blank" rel="noopener" title="luogu" class="md-social__link">
+          <img src="https://www.luogu.com.cn/favicon.ico" alt="luogu">
+        </a>
+        <a href="https://codeforces.com/profile/lnw143" target="_blank" rel="noopener" title="codeforces" class="md-social__link">
+          <img src="https://codeforces.org/s/96336/favicon-32x32.png" alt="codeforces">
+        </a>
+        <a href="https://atcoder.jp/users/lnw143" target="_blank" rel="noopener" title="atcoder" class="md-social__link">
+          <img src="https://img.atcoder.jp/assets/logo.png" alt="atcoder">
+        </a>
+        <a href="https://www.topcoder.com/members/lnw143/" target="_blank" rel="noopener" title="topcoder" class="md-social__link">
+          <img src="https://www.topcoder.com/favicon.ico" alt="topcoder">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.annotate", "content.code.select", "content.code.copy", "navigation.tabs", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+	<!-- Add scripts that need to run before here -->
+	
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+      
+    
+	<!-- Add scripts that need to run afterwards here -->
+	<!-- music module -->
+	<meting-js
+		server="netease"
+		type="playlist"
+		id="12370214543"
+		fixed="true"
+		loop="all"
+		volume="0.3"
+	>
+	</meting-js>
+
+  </body>
+</html>
