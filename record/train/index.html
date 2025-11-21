@@ -1828,6 +1828,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#20251121-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251121 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#20251120-赛后总结" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2286,7 +2297,7 @@
                       <li class="md-nav__item">
                         <div class="md-nav__link">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg>
-                          <time datetime="2025-11-20 00:00:00+00:00" class="md-ellipsis">2025年11月20日</time>
+                          <time datetime="2025-11-21 00:00:00+00:00" class="md-ellipsis">2025年11月21日</time>
                         </div>
                       </li>
                     
@@ -2365,7 +2376,18 @@
 <p>Basic：二分，Meet in the Middle,DP（？），二进制分组</p>
 <p>思路：切比雪夫转曼哈顿，二分/分数规划</p>
 </details>
+<h2 id="20251121-赛后总结">20251121 赛后总结</h2>
+<p><a href="https://xinyoudui.com/ac/contest/74700BFF30008E90734486/problem/42600">link</a></p>
+<p>T1 T2 比较迅速通过，看下 T3 T4 并没什么想法，T4 想到写网络流但是感觉没多少分。</p>
+<p>T4 看到二分图匹配尝试想 Hall 定理，细想之后发现可以优化的形式，喜提 68 分，看了几眼性质并不会什么优化，跑去写 T3，但是直到比赛结束也不会什么高档部分分，只写了 15 分暴力就开始阀座了。</p>
+<p>最后 100 + 100 + 15 + 68，并没有挂分。</p>
+<p>然而看场上 T3 很多高档部分分，65 分可能还是比较大众的。</p>
+<p>并且 T4 赛后仔细想了一下发现想明白了，原来并不用区间加等差数列查全局 max，实际上是区间加与全局 max，简单维护。比较可惜。</p>
+<p>可能还是后程比较放松，导致 T3 没有拿到高分，T4 没有想到正解。下次不要懈怠了。</p>
+<p>以及 T4 没记清楚网络流跑二分图最大匹配的时间复杂度，实际上是 <span class="arithmatex">\(O(E \sqrt V)\)</span> 的，放到这道题 <span class="arithmatex">\(V=n^2,E=n^3\)</span> 就是 <span class="arithmatex">\(O(n^4)\)</span>。</p>
+<p>T3 的数论相关不是很有感觉，有空补一下杂题。</p>
 <h2 id="20251120-赛后总结">20251120 赛后总结</h2>
+<p><a href="https://gdnoj.com/d/senior25fall/contest/691df90474053fc5c02804a1">link</a></p>
 <p>今天把总结都搬过来了，可能有些咕咕没有解决。</p>
 <p>开场先看题，发现 T1 好像没啥 polylog 的可行性，T2 好像可以树剖做到 2log，不会什么优化。T3 不怎么有想法，看到 T4，想了比较久发现是二维偏序 DP，cdq 做到 2log。</p>
 <p>这时去打 T2，写完测大样例发现还行，于是去想 T1，发现可以去掉 log 变成 <span class="arithmatex">\(O(n \sqrt n)\)</span>，感觉挺对，于是开写，调了一会过了大样例，于是丢下去写 T3。</p>
