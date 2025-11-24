@@ -10,7 +10,7 @@
         <meta name="author" content="lnw143">
       
       
-        <link rel="canonical" href="https://lnw143.github.io/blog/record/train/">
+        <link rel="canonical" href="https://lnw143.github.io/blog/record/summary/">
       
       
         <link rel="prev" href="../../gmoj/p8829/">
@@ -1828,6 +1828,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#20251124-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251124 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#20251121-赛后总结" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2371,11 +2382,27 @@
 <p>图上问题：圆方树</p>
 <p>构造：欧拉回路</p>
 <p>平面图计数：<span class="arithmatex">\(V-E+F=C+1\)</span></p>
-<p>图匹配：匈牙利，KM，带花树</p>
+<p>二分图匹配：Hall 定理</p>
 <p>生成树计数：矩阵树定理</p>
 <p>Basic：二分，Meet in the Middle,DP（？），二进制分组</p>
 <p>思路：切比雪夫转曼哈顿，二分/分数规划</p>
 </details>
+<details class="warning">
+<summary>NOIP2024 挂在哪里？</summary>
+<p>T4 没有想到对一个单点考虑能对答案进行贡献的条件，找到所有 <span class="arithmatex">\((x,y,v)\)</span> 的区间最小值限制后相当于查询 <span class="arithmatex">\(\min(r,y)-\max(l,x)+1 \ge k\)</span> 的所有 <span class="arithmatex">\((x,y,v)\)</span> 中的 <span class="arithmatex">\(v_{\max}\)</span>，这个东西分讨 <span class="arithmatex">\(y,r\)</span> 的大小关系可以写成两个二维偏序的形式，发现都有一维是前/后缀限制，可以做到 1log。</p>
+<p>T3 考场上好像一直心理暗示我做不出来的，导致没有拿到高档部分分，实际上手玩一下容易发现计数充要并得到换根 DP 式，还是要克服心理障碍。</p>
+</details>
+<h2 id="20251124-赛后总结">20251124 赛后总结</h2>
+<p><a href="https://xinyoudui.com/ac/contest/74700C1390008E9073E062/problem/42675">link</a></p>
+<p>感觉题目不是很 noip，但是确实自己有失误的地方。</p>
+<p>T1 先看了眼感觉签到，T2 构造感觉不是很会，T3 神秘 DP 没有细想形式，T4 看了眼发现是类似比赛做扫描线加历史和，于是写完 T1 开冲，冲完剩下 30 min，拼上 T2 T3 暴力就结束了，最后 30s 发现 T1 没有取模，挽救回 12 分。</p>
+<p>T2 神秘构造题，首先刻画成序列问题，发现可以压缩连续段，转化成 12 序列，赛时只想到了这里。</p>
+<p>最后分讨压缩完之后的序列长度奇偶性，奇数判断中间的是 1 还是 2，是 2 直接做，否则找最靠近中间的两个 2 尝试让一个 2 移到中间，发现充要之后即可简单判断，偶数则拆成两个奇数判断即可，时间复杂度线性。</p>
+<p>然而上面只是构造出有解的充分条件，为什么是必要的需要感受。</p>
+<p>T3 没有立马想到若固定选点方案则每条边贡献系数是两边点数相较于初始状态的绝对差，可能导致没有想正解。一定要调整好状态，记得提醒自己思路转换。</p>
+<p>可能开始 1h 啥也没干浪费了较多时间，如果没有头绪就先把手上有的暴力和简单题写了，不要发呆浪费时间。</p>
+<p>T2 不是很难，难点在于快而准的做完一系列转换，想到一半放弃了，可能要增加思考的深度。</p>
+<p>T3 感觉想清楚写出 <span class="arithmatex">\(nk^3\)</span> 的 DP 并不难，后面的优化可能比较 dirty work，可能光顾着冲 T4 了，明天要注意比赛策略。</p>
 <h2 id="20251121-赛后总结">20251121 赛后总结</h2>
 <p><a href="https://xinyoudui.com/ac/contest/74700BFF30008E90734486/problem/42600">link</a></p>
 <p>T1 T2 比较迅速通过，看下 T3 T4 并没什么想法，T4 想到写网络流但是感觉没多少分。</p>
