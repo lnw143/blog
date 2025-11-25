@@ -1828,6 +1828,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#20251125-赛后总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20251125 赛后总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#20251124-赛后总结" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2330,7 +2341,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 11 分钟阅读时间
+                              需要 12 分钟阅读时间
                             
                           </span>
                         </div>
@@ -2392,6 +2403,15 @@
 <p>T4 没有想到对一个单点考虑能对答案进行贡献的条件，找到所有 <span class="arithmatex">\((x,y,v)\)</span> 的区间最小值限制后相当于查询 <span class="arithmatex">\(\min(r,y)-\max(l,x)+1 \ge k\)</span> 的所有 <span class="arithmatex">\((x,y,v)\)</span> 中的 <span class="arithmatex">\(v_{\max}\)</span>，这个东西分讨 <span class="arithmatex">\(y,r\)</span> 的大小关系可以写成两个二维偏序的形式，发现都有一维是前/后缀限制，可以做到 1log。</p>
 <p>T3 考场上好像一直心理暗示我做不出来的，导致没有拿到高档部分分，实际上手玩一下容易发现计数充要并得到换根 DP 式，还是要克服心理障碍。</p>
 </details>
+<h2 id="20251125-赛后总结">20251125 赛后总结</h2>
+<p><a href="https://xinyoudui.com/ac/contest/74700C1460008E9073E074/problem/42679">link</a></p>
+<p>今天打得还行，时间分配较为合理，发挥比较正常。</p>
+<p>T1 并没有想到对于固定的 <span class="arithmatex">\(l,x\)</span> 只有 <span class="arithmatex">\(O(\sqrt n)\)</span> 个合法的 <span class="arithmatex">\(r\)</span>，最后写了一个记搜加哈希过了，还是要注意观察性质。</p>
+<p>T2 比较简易，随机增量法简单题。</p>
+<p>T3 赛时写了 <span class="arithmatex">\(O(nc \log n + q \log n)\)</span> 的线段树历史和被卡常了，发现把 set 换成链表就可以过，还是要注意卡常，减少不必要的 STL，并记得多测极限数据。</p>
+<p>T4 赛时拼了 70 分感觉性价比较高，发挥还好，并没有挂分。</p>
+<p>感觉今天场比较简易，但是 T3 挂分，也是因为没有想到根号分块，下次要记得测极限数据并优化理论复杂度，记得平衡。</p>
+<p>T4 没有仔细想，实际上是比较思维的 DS，可能有点 ad-hoc，但手玩一下样例可能可以发现规律，主要是前面花费了较多时间，下次要注意效率。</p>
 <h2 id="20251124-赛后总结">20251124 赛后总结</h2>
 <p><a href="https://xinyoudui.com/ac/contest/74700C1390008E9073E062/problem/42675">link</a></p>
 <p>感觉题目不是很 noip，但是确实自己有失误的地方。</p>
